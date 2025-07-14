@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>COTIZACIONES | SOLFIX PERU S.A.C.</title>
+        <link rel="icon" href="IMAGENES1/logo2.jpg" type="image/x-icon">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="ESTILO1/cotizaciones.css">
+        <link rel="stylesheet" href="ESTILO1/carrito.css">
+        <script src="JS/carrito.js"></script>
+        <script src="JS/Menu.js"></script>
+        
+    </head>
+    
+    <body>
+        <header>
+            <div class="header-container">
+                <div class="logo-container">
+                    <img src="IMAGENES1/logo2.jpg" alt="Logo SOLFIX PERU S.A.C." class="logo">
+                    <h1 class="titulo-principal">Cotizaciones</h1>
+                </div>
+                <nav class="topnav" id="myTopnav">
+                    <a href="index.html">Inicio</a>
+                    <a href="productos.html">Productos</a>
+                    <a href="servicios.html">Servicios</a>
+                    <a href="contacto.html">Contacto</a>
+                    <a href="nosotros.html">Nosotros</a>
+                    <a href="cotizaciones.html" class="active">Cotizaciones</a>
+                    <a href="nuestras-tiendas.html">Nuestras Tiendas</a>
+                    <a href="novedades.html">Novedades</a>
+                    <a href="faq.html">FAQ</a>
+                    <a href="trabaja-con-nosotros.html">Trabaja con Nosotros</a>
+                    <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                </nav>
+            </div>
+        </header>
+                        <!-- Ícono en la parte superior derecha -->
+                  <div class="icon-container">
+                      <img src="IMAGENES1/carrito.png" alt="Carrito de Compras" id="iconoCarrito">
+                  </div>
+                        
+        <div class="hero-banner">
+          <div class="hero-content">
+            <h2><br>APROVECHE <br> AHORA</h2>
+          </div>
+        </div>
+    
+        <div class="container">
+            <main class="main-content">
+                <section class="intro">
+                    <h2>Formulario de Cotización</h2>
+                    <p>Complete el siguiente formulario para generar una cotización personalizada.</p>
+                    <div class="cta">
+                        <p>¿Necesita ayuda? Llámenos al <strong>(01) 123-4567</strong></p>
+                    </div>
+                </section>
+    
+                <form id="form-cotizacion">
+                    <fieldset>
+                        <legend>Datos del Cliente</legend>
+                        <div class="form-group">
+                            <label for="nombre">Nombre Completo:</label>
+                            <input type="text" id="nombre" name="nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Correo Electrónico:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="telefono">Teléfono:</label>
+                            <input type="tel" id="telefono" name="telefono" required>
+                        </div>
+                    </fieldset>
+    
+                    <fieldset class="productos-fieldset">
+                        <legend>Selección de Productos</legend>
+                        <div class="form-group">
+                            <label>Seleccione los productos que desea cotizar:</label>
+                            
+                            <div class="carrusel-container">
+                              <div class="carrusel">
+                                  <input type="radio" id="slide-1" name="slides" checked>
+                                  <input type="radio" id="slide-2" name="slides">
+                                  <input type="radio" id="slide-3" name="slides">
+                                  <input type="radio" id="slide-4" name="slides">
+                                  <input type="radio" id="slide-5" name="slides">
+                                  <input type="radio" id="slide-6" name="slides">
+                                  <input type="radio" id="slide-7" name="slides">
+                                  <input type="radio" id="slide-8" name="slides">
+                                  <input type="radio" id="slide-9" name="slides">
+                                  <input type="radio" id="slide-10" name="slides">
+                                  <input type="radio" id="slide-11" name="slides">
+                                  <input type="radio" id="slide-12" name="slides">
+                                  
+                                  <div class="slides">
+                                      <!-- Slide 1 -->
+                                      <div class="productos-grid">
+                                          <!-- Producto 1 -->
+                                          <div class="product-card">
+                                              <h3>Piso Altamira Blanco 45x45</h3>
+                                              <p>Presentación: Caja 2.23 m²</p>
+                                              <p>Precio: S/ <span class="precio">69.13</span></p>
+                                              <label>Cantidad:
+                                                  <input type="text" name="altamira" pattern="[0-9]*" inputmode="numeric" placeholder="0" class="cantidad">
+                                              </label>
+                                              <div class="subtotal">
+                                                  <label>Subtotal:
+                                                      <input type="text" name="total-altamira" value="0.00" readonly>
+                                                  </label>
+                                              </div>
+                                          </div>
+                          
+                                          <!-- Producto 2 -->
+                                          <div class="product-card">
+                                              <h3>Piso Arce Natural Comercial 60x60</h3>
+                                              <p>Presentación: Caja 1.80 m²</p>
+                                              <p>Precio: S/ <span class="precio">40.50</span></p>
+                                              <label>Cantidad:
+                                                  <input type="text" name="arce" pattern="[0-9]*" inputmode="numeric" placeholder="0" class="cantidad">
+                                              </label>
+                                              <div class="subtotal">
+                                                  <label>Subtotal:
+                                                      <input type="text" name="total-arce" value="0.00" readonly>
+                                                  </label>
+                                              </div>
+                                          </div>
+                          
+                                          <!-- Producto 3 -->
+                                          <div class="product-card">
+                                              <h3>Piso Atenas Gris 45x45</h3>
+                                              <p>Presentación: Caja 2.23 m²</p>
+                                              <p>Precio: S/ <span class="precio">56.87</span></p>
+                                              <label>Cantidad:
+                                                  <input type="text" name="atenas-gris" pattern="[0-9]*" inputmode="numeric" placeholder="0" class="cantidad">
+                                              </label>
+                                              <div class="subtotal">
+                                                  <label>Subtotal:
+                                                      <input type="text" name="total-atenas-gris" value="0.00" readonly>
+                                                  </label>
+                                              </div>
+                                          </div>
+                                      </div>
+                                      
+                                      <!-- Slide 2 -->
+                                      <div class="productos-grid">
+                                          <!-- Producto 4 -->
+                                          <div class="product-card">
+                                              <h3>Piso Atenas Marfil 45x45</h3>
+                                              <p>Presentación: Caja 2.23 m²</p>
+                                              <p>Precio: S/ <span class="precio">56.87</span></p>
+                                              <label>Cantidad:
+                                                  <input type="text" name="atenas-marfil" pattern="[0-9]*" inputmode="numeric" placeholder="0" class="cantidad">
+                                              </label>
+                                              <div class="subtotal">
+                                                  <label>Subtotal:
+                                                      <input type="text" name="total-atenas-marfil" value="0.00" readonly>
+                                                  </label>
+                                              </div>
+                                          </div>
+                          
+                                          <!-- Producto 5 -->
+                                          <div class="product-card">
+                                              <h3>Piso Brasilia Natural Ext. 45x45</h3>
+                                              <p>Presentación: Caja 2.23 m²</p>
+                                              <p>Precio: S/ <span class="precio">54.86</span></p>
+                                              <label>Cantidad:
+                                                  <input type="text" name="brasilia" pattern="[0-9]*" inputmode="numeric" placeholder="0" class="cantidad">
+                                              </label>
+                                              <div class="subtotal">
+                                                  <label>Subtotal:
+                                                      <input type="text" name="total-brasilia" value="0.00" readonly>
+                                                  </label>
+                                              </div>
+                                          </div>
+                          
+                                          <!-- Producto 6 -->
+                                          <div class="product-card">
+                                            <h3>Piso Bristol Caramelo 60x60</h3>
+                                            <p>Presentación: Caja 1.8 m²</p>
+                                            <p>Precio: S/ <span class="precio">58.50</span></p>
+                                            <label>Cantidad:
+                                              <input type="text" name="bristol" pattern="[0-9]*" inputmode="numeric" placeholder="0" class="cantidad">
+                                            </label>
+                                            <div class="subtotal">
+                                              <label>Subtotal:
+                                                <input type="text" name="total-bristol" value="0.00" readonly>
+                                              </label>
+                                            </div>
+                                          </div>
+                                      </div>
+    
+                                      <!-- Slide 3 -->
+                                      <div class="productos-grid">
+                                        <!-- Producto 7 -->
+                                        <div class="product-card">
+                                          <h3>Piso Caoba Beige Com. 60x60</h3>
+                                          <p>Presentación: Caja 1.8 m²</p>
+                                          <p>Precio: S/ <span class="precio">36.00</span></p>
+                                          <label>Cantidad:
+                                            <input type="text" name="caoba" pattern="[0-9]*" inputmode="numeric" placeholder="0" class="cantidad">
+                                          </label>
+                                          <div class="subtotal">
+                                            <label>Subtotal:
+                                              <input type="text" name="total-caoba" value="0.00" readonly>
+                                            </label>
+                                          </div>
+                                        </div>
+    
+                                        <!-- Producto 8 -->
+                                        <div class="product-card">
+                                          <h3>Pared Amapola Hueso 30x60</h3>
+                                          <p>Presentación: Caja 2.18 m²</p>
+                                          <p>Precio: S/ <span class="precio">75.21</span></p>
+                                          <label>Cantidad:
+                                            <input type="text" name="amapola" pattern="[0-9]*" inputmode="numeric" placeholder="0" class="cantidad">
+                                          </label>
+                                          <div class="subtotal">
+                                            <label>Subtotal:
+                                              <input type="text" name="total-amapola" value="0.00" readonly>
+                                            </label>
+                                          </div>
+                                        </div>
+    
+                                        <!-- Producto 9 -->
+                                        <div class="product-card">
+                                          <h3>Pared Chocolate Azul 27x45</h3>
+                                          <p>Presentación: Caja 2.07 m²</p>
+                                          <p>Precio: S/ <span class="precio">51.34</span></p>
+                                          <label>Cantidad:
+                                            <input type="text" name="chocolate" pattern="[0-9]*" inputmode="numeric" placeholder="0" class="cantidad">
+                                          </label>
+                                          <div class="subtotal">
+                                            <label>Subtotal:
+                                              <input type="text" name="total-chocolate" value="0.00" readonly>
+                                            </label>
+                                          </div>
+                                        </div>
+                                      </div>
+    
+                                      <!-- Slide 4 -->
+                                      <div class="productos-grid">
+                                        <!-- Producto 10 -->
+                                        <div class="product-card">
+                                          <h3>Pared Fresia Hueso 30x60</h3>
+                                          <p>Presentación: Caja 1.81 m²</p>
+                                          <p>Precio: S/ <span class="precio">59.55</span></p>
+                                          <label>Cantidad:
+                                            <input type="text" name="fresia" pattern="[0-9]*" inputmode="numeric" placeholder="0" class="cantidad">
+                                          </label>
+                                          <div class="subtotal">
+                                            <label>Subtotal:
+                                              <input type="text" name="total-fresia" value="0.00" readonly>
+                                            </label>
+                                          </div>
+                                        </div>
+    
+                                        <!-- Producto 11 -->
+                                        <div class="product-card">
+                                          <h3>Pared Filetti Granito Beige Extra</h3>
+                                          <p>Presentación: Caja 1.62 m²</p>
+                                          <p>Precio: S/ <span class="precio">45.36</span></p>
+                                          <label>Cantidad:
+                                            <input type="text" name="filetti-beige" pattern="[0-9]*" inputmode="numeric" placeholder="0" class="cantidad">
+                                          </label>
+                                          <div class="subtotal">
+                                            <label>Subtotal:
+                                              <input type="text" name="total-filetti-beige" value="0.00" readonly>
+                                            </label>
+                                          </div>
+                                        </div>
+    
+                                        <!-- Producto 12 -->
+                                        <div class="product-card">
+                                          <h3>Pared Filetti Granito Gris</h3>
+                                          <p>Presentación: Caja 1.62 m²</p>
+                                          <p>Precio: S/ <span class="precio">60.91</span></p>
+                                          <label>Cantidad:
+                                            <input type="text" name="filetti-gris" pattern="[0-9]*" inputmode="numeric" placeholder="0" class="cantidad">
+                                          </label>
+                                          <div class="subtotal">
+                                            <label>Subtotal:
+                                              <input type="text" name="total-filetti-gris" value="0.00" readonly>
+                                            </label>
+                                          </div>
+                                        </div>
+                                      </div>
+    
+                                      <!-- Slide 5 -->
+                                      <div class="productos-grid">
+                                        <!-- Producto 13 -->
+                                        <div class="product-card">
+                                          <h3>Pared Legno Beige 25x40</h3>
+                                          <p>Presentación: Caja 2.20 m²</p>
+                                          <p>Precio: S/ <span class="precio">47.36</span></p>
+                                          <label>Cantidad:
+                                            <input type="text" name="legno" pattern="[0-9]*" inputmode="numeric" placeholder="0" class="cantidad">
+                                          </label>
+                                          <div class="subtotal">
+                                            <label>Subtotal:
+                                              <input type="text" name="total-legno" value="0.00" readonly>
+                                            </label>
+                                          </div>
+                                        </div>
+    
+                                        <!-- Producto 14 -->
+                                        <div class="product-card">
+                                          <h3>Pared Mix Marfil 30x60</h3>
+                                          <p>Presentación: Caja 1.81 m²</p>
+                                          <p>Precio: S/ <span class="precio">51.95</span></p>
+                                          <label>Cantidad:
+                                            <input type="text" name="mix" pattern="[0-9]*" inputmode="numeric" placeholder="0" class="cantidad">
+                                          </label>
+                                          <div class="subtotal">
+                                            <label>Subtotal:
+                                              <input type="text" name="total-mix" value="0.00" readonly>
+                                            </label>
+                                          </div>
+                                        </div>
+    
+                                        <!-- Producto 15 -->
+                                        <div class="product-card">
+                                          <h3>Pared Onix Hueso 30x60</h3>
+                                          <p>Presentación: Caja 1.81 m²</p>
+                                          <p>Precio: S/ <span class="precio">59.55</span></p>
+                                          <label>Cantidad:
+                                            <input type="text" name="onix" pattern="[0-9]*" inputmode="numeric" placeholder="0" class="cantidad">
+                                          </label>
+                                          <div class="subtotal">
+                                            <label>Subtotal:
+                                              <input type="text" name="total-onix" value="0.00" readonly>
+                                            </label>
+                                          </div>
+                                        </div>
+                                      </div>
+    
+                                      <!-- Slide 6 -->
+                                      <div class="productos-grid">
+                                        <!-- Producto 16 -->
+                                        <div class="product-card">
+                                          <h3>Cocina Decorado Chocolate 27x45</h3>
+                                          <p>Presentación: Unidad</p>
+                                          <p>Precio: S/ <span class="precio">11.56</span></p>
+                                          <label>Cantidad:
+                                            <input type="text" name="decorado" pattern="[0-9]*" inputmode="numeric" placeholder="0" class="cantidad">
+                                          </label>
+                                          <div class="subtotal">
+                                            <label>Subtotal:
+                                              <input type="text" name="total-decorado" value="0.00" readonly>
+                                            </label>
+                                          </div>
+                                        </div>
+    
+                                        <!-- Producto 17 -->
+                                        <div class="product-card">
+                                          <h3>Cocina Decorado Fresia 30x60</h3>
+                                          <p>Presentación: Unidad</p>
+                                          <p>Precio: S/ <span class="precio">13.75</span></p>
+                                          <label>Cantidad:
+                                            <input type="text" name="fresia-decorado" pattern="[0-9]*" inputmode="numeric" placeholder="0" class="cantidad">
+                                          </label>
+                                          <div class="subtotal">
+                                            <label>Subtotal:
+                                              <input type="text" name="total-fresia-decorado" value="0.00" readonly>
+                                            </label>
+                                          </div>
+                                        </div>
+    
+                                        <!-- Producto 18 -->
+                                        <div class="product-card">
+                                          <h3>Cocina Filetti Granito Beige</h3>
+                                          <p>Presentación: Unidad</p>
+                                          <p>Precio: S/ <span class="precio">13.50</span></p>
+                                          <label>Cantidad:
+                                            <input type="text" name="filetti-beige-decorado" pattern="[0-9]*" inputmode="numeric" placeholder="0" class="cantidad">
+                                          </label>
+                                          <div class="subtotal">
+                                            <label>Subtotal:
+                                              <input type="text" name="total-filetti-beige-decorado" value="0.00" readonly>
+                                            </label>
+                                          </div>
+                                        </div>
+                                      </div>
+    
+                                      <!-- Slide 7 -->
+                                      <div class="productos-grid">
+                                        <!-- Producto 19 -->
+                                        <div class="product-card">
+                                          <h3>Cocina Filetti Granito Gris</h3>
+                                          <p>Presentación: Unidad</p>
+                                          <p>Precio: S/ <span class="precio">13.50</span></p>
+                                          <label>Cantidad:
+                                            <input type="text" name="filetti-gris-decorado" pattern="[0-9]*" inputmode="numeric" placeholder="0" class="cantidad">
+                                          </label>
+                                          <div class="subtotal">
+                                            <label>Subtotal:
+                                              <input type="text" name="total-filetti-gris-decorado" value="0.00" readonly>
+                                            </label>
+                                          </div>
+                                        </div>
+    
+                                        <!-- Producto 20 -->
+                                        <div class="product-card">
+                                          <h3>Cocina Mix Marfil 30x60</h3>
+                                          <p>Presentación: Unidad</p>
+                                          <p>Precio: S/ <span class="precio">12.60</span></p>
+                                          <label>Cantidad:
+                                            <input type="text" name="mix-marfil-decorado" pattern="[0-9]*" inputmode="numeric" placeholder="0" class="cantidad">
+                                          </label>
+                                          <div class="subtotal">
+                                            <label>Subtotal:
+                                              <input type="text" name="total-mix-marfil-decorado" value="0.00" readonly>
+                                            </label>
+                                          </div>
+                                        </div>
+    
+                                        <!-- Producto 21 -->
+                                        <div class="product-card">
+                                          <h3>Cocina Onix Hueso 30x60</h3>
+                                          <p>Presentación: Unidad</p>
+                                          <p>Precio: S/ <span class="precio">13.75</span></p>
+                                          <label>Cantidad:
+                                            <input type="text" name="onix-hueso-decorado" pattern="[0-9]*" inputmode="numeric" placeholder="0" class="cantidad">
+                                          </label>
+                                          <div class="subtotal">
+                                            <label>Subtotal:
+                                              <input type="text" name="total-onix-hueso-decorado" value="0.00" readonly>
+                                            </label>
+                                          </div>
+                                        </div>
+                                      </div>
+    
+                                      <!-- Slide 8 -->
+                                      <div class="productos-grid">
+                                        <!-- Producto 22 -->
+                                        <div class="product-card">
+                                          <h3>Baño Decorado Amapola Hueso 30x60</h3>
+                                          <p>Presentación: Unidad</p>
+                                          <p>Precio: S/ <span class="precio">13.75</span></p>
+                                          <label>Cantidad:
+                                            <input type="text" name="amapola-decorado" pattern="[0-9]*" inputmode="numeric" placeholder="0" class="cantidad">
+                                          </label>
+                                          <div class="subtotal">
+                                            <label>Subtotal:
+                                              <input type="text" name="total-amapola-decorado" value="0.00" readonly>
+                                            </label>
+                                          </div>
+                                        </div>
+    
+                                        <!-- Producto 23 -->
+                                        <div class="product-card">
+                                          <h3>Baño Decorado Mix Marfil 30x60</h3>
+                                          <p>Presentación: Unidad</p>
+                                          <p>Precio: S/ <span class="precio">12.60</span></p>
+                                          <label>Cantidad:
+                                            <input type="text" name="mix-marfil-baño" pattern="[0-9]*" inputmode="numeric" placeholder="0" class="cantidad">
+                                          </label>
+                                          <div class="subtotal">
+                                            <label>Subtotal:
+                                              <input type="text" name="total-mix-marfil-baño" value="0.00" readonly>
+                                            </label>
+                                          </div>
+                                        </div>
+    
+                                        <!-- Producto 24 -->
+                                        <div class="product-card">
+                                          <h3>Baño Decorado Onix Hueso 30x60</h3>
+                                          <p>Presentación: Unidad</p>
+                                          <p>Precio: S/ <span class="precio">13.75</span></p>
+                                          <label>Cantidad:
+                                            <input type="text" name="onix-hueso-baño" pattern="[0-9]*" inputmode="numeric" placeholder="0" class="cantidad">
+                                          </label>
+                                          <div class="subtotal">
+                                            <label>Subtotal:
+                                              <input type="text" name="total-onix-hueso-baño" value="0.00" readonly>
+                                            </label>
+                                          </div>
+                                        </div>
+                                      </div>
+    
+                                      <!-- Slide 9 -->
+                                      <div class="productos-grid">
+                                        <!-- Producto 25 -->
+                                        <div class="product-card">
+                                          <h3>Pegamento Weber Piso Pared Gris 25 kg</h3>
+                                          <p>Presentación: Bolsa</p>
+                                          <p>Precio: S/ <span class="precio">30.00</span></p>
+                                          <label>Cantidad:
+                                            <input type="text" name="weber-piso-pared" pattern="[0-9]*" inputmode="numeric" placeholder="0" class="cantidad">
+                                          </label>
+                                          <div class="subtotal">
+                                            <label>Subtotal:
+                                              <input type="text" name="total-weber-piso-pared" value="0.00" readonly>
+                                            </label>
+                                          </div>
+                                        </div>
+    
+                                        <!-- Producto 26 -->
+                                        <div class="product-card">
+                                          <h3>Pegamento Weber Revestimiento Blanco 25 kg</h3>
+                                          <p>Presentación: Bolsa</p>
+                                          <p>Precio: S/ <span class="precio">35.00</span></p>
+                                          <label>Cantidad:
+                                            <input type="text" name="weber-blanco" pattern="[0-9]*" inputmode="numeric" placeholder="0" class="cantidad">
+                                          </label>
+                                          <div class="subtotal">
+                                            <label>Subtotal:
+                                              <input type="text" name="total-weber-blanco" value="0.00" readonly>
+                                            </label>
+                                          </div>
+                                        </div>
+    
+                                        <!-- Producto 27 -->
+                                        <div class="product-card">
+                                          <h3>Pegamento Base Yeso Porcelanatto 20 kg</h3>
+                                          <p>Presentación: Bolsa</p>
+                                          <p>Precio: S/ <span class="precio">42.00</span></p>
+                                          <label>Cantidad:
+                                            <input type="text" name="pegamento-yeso" pattern="[0-9]*" inputmode="numeric" placeholder="0" class="cantidad">
+                                          </label>
+                                          <div class="subtotal">
+                                            <label>Subtotal:
+                                              <input type="text" name="total-pegamento-yeso" value="0.00" readonly>
+                                            </label>
+                                          </div>
+                                        </div>
+                                      </div>
+    
+                                      <!-- Slide 10 -->
+                                      <div class="productos-grid">
+                                        <!-- Producto 28 -->
+                                        <div class="product-card">
+                                          <h3>Fragua Color Gris Oscuro Bolsa</h3>
+                                          <p>Presentación: Bolsa</p>
+                                          <p>Precio: S/ <span class="precio">4.50</span></p>
+                                          <label>Cantidad:
+                                            <input type="text" name="fragua-gris" pattern="[0-9]*" inputmode="numeric" placeholder="0" class="cantidad">
+                                          </label>
+                                          <div class="subtotal">
+                                            <label>Subtotal:
+                                              <input type="text" name="total-fragua-gris" value="0.00" readonly>
+                                            </label>
+                                          </div>
+                                        </div>
+    
+                                        <!-- Producto 29 -->
+                                        <div class="product-card">
+                                          <h3>Fragua Color Blanco Bolsa</h3>
+                                          <p>Presentación: Bolsa</p>
+                                          <p>Precio: S/ <span class="precio">4.50</span></p>
+                                          <label>Cantidad:
+                                            <input type="text" name="fragua-blanco" pattern="[0-9]*" inputmode="numeric" placeholder="0" class="cantidad">
+                                          </label>
+                                          <div class="subtotal">
+                                            <label>Subtotal:
+                                              <input type="text" name="total-fragua-blanco" value="0.00" readonly>
+                                            </label>
+                                          </div>
+                                        </div>
+    
+                                        <!-- Producto 30 -->
+                                        <div class="product-card">
+                                          <h3>Cruzeta Separador 3 mm Bolsa</h3>
+                                          <p>Presentación: Bolsa</p>
+                                          <p>Precio: S/ <span class="precio">3.50</span></p>
+                                          <label>Cantidad:
+                                            <input type="text" name="cruzeta-3mm" pattern="[0-9]*" inputmode="numeric" placeholder="0" class="cantidad">
+                                          </label>
+                                          <div class="subtotal">
+                                            <label>Subtotal:
+                                              <input type="text" name="total-cruzeta-3mm" value="0.00" readonly>
+                                            </label>
+                                          </div>
+                                        </div>
+                                      </div>
+    
+                                      <!-- Slide 11 -->
+                                      <div class="productos-grid">
+                                        <!-- Producto 31 -->
+                                        <div class="product-card">
+                                          <h3>Cruzeta Separador 5 mm Bolsa</h3>
+                                          <p>Presentación: Bolsa</p>
+                                          <p>Precio: S/ <span class="precio">3.50</span></p>
+                                          <label>Cantidad:
+                                            <input type="text" name="cruzeta-5mm" pattern="[0-9]*" inputmode="numeric" placeholder="0" class="cantidad">
+                                          </label>
+                                          <div class="subtotal">
+                                            <label>Subtotal:
+                                              <input type="text" name="total-cruzeta-5mm" value="0.00" readonly>
+                                            </label>
+                                          </div>
+                                        </div>
+    
+                                        <!-- Producto 32 -->
+                                        <div class="product-card">
+                                          <h3>Cinta para Junta Drywall</h3>
+                                          <p>Presentación: Rollo</p>
+                                          <p>Precio: S/ <span class="precio">5.00</span></p>
+                                          <label>Cantidad:
+                                            <input type="text" name="cinta-junta" pattern="[0-9]*" inputmode="numeric" placeholder="0" class="cantidad">
+                                          </label>
+                                          <div class="subtotal">
+                                            <label>Subtotal:
+                                              <input type="text" name="total-cinta-junta" value="0.00" readonly>
+                                            </label>
+                                          </div>
+                                        </div>
+    
+                                        <!-- Producto 33 -->
+                                        <div class="product-card">
+                                          <h3>Cinta de Papel Drywall</h3>
+                                          <p>Presentación: Rollo</p>
+                                          <p>Precio: S/ <span class="precio">5.00</span></p>
+                                          <label>Cantidad:
+                                            <input type="text" name="cinta-papel" pattern="[0-9]*" inputmode="numeric" placeholder="0" class="cantidad">
+                                          </label>
+                                          <div class="subtotal">
+                                            <label>Subtotal:
+                                              <input type="text" name="total-cinta-papel" value="0.00" readonly>
+                                            </label>
+                                          </div>
+                                        </div>
+                                      </div>
+    
+                                      <!-- Slide 12 -->
+                                      <div class="productos-grid">
+                                        <!-- Producto 34 -->
+                                        <div class="product-card">
+                                          <h3>Cuchara Albañil Mango Plástico</h3>
+                                          <p>Presentación: Unidad</p>
+                                          <p>Precio: S/ <span class="precio">5.00</span></p>
+                                          <label>Cantidad:
+                                            <input type="text" name="cuchara" pattern="[0-9]*" inputmode="numeric" placeholder="0" class="cantidad">
+                                          </label>
+                                          <div class="subtotal">
+                                            <label>Subtotal:
+                                              <input type="text" name="total-cuchara" value="0.00" readonly>
+                                            </label>
+                                          </div>
+                                        </div>
+    
+                                        <!-- Producto 35 -->
+                                        <div class="product-card">
+                                          <h3>Esponja Grande Multiuso</h3>
+                                          <p>Presentación: Unidad</p>
+                                          <p>Precio: S/ <span class="precio">2.00</span></p>
+                                          <label>Cantidad:
+                                            <input type="text" name="esponja" pattern="[0-9]*" inputmode="numeric" placeholder="0" class="cantidad">
+                                          </label>
+                                          <div class="subtotal">
+                                            <label>Subtotal:
+                                              <input type="text" name="total-esponja" value="0.00" readonly>
+                                            </label>
+                                          </div>
+                                        </div>
+                                      </div>
+                                  </div>
+                                  
+                                  <div class="carrusel-controls">
+                                      <label for="slide-1" class="carrusel-dot"></label>
+                                      <label for="slide-2" class="carrusel-dot"></label>
+                                      <label for="slide-3" class="carrusel-dot"></label>
+                                      <label for="slide-4" class="carrusel-dot"></label>
+                                      <label for="slide-5" class="carrusel-dot"></label>
+                                      <label for="slide-6" class="carrusel-dot"></label>
+                                      <label for="slide-7" class="carrusel-dot"></label>
+                                      <label for="slide-8" class="carrusel-dot"></label>
+                                      <label for="slide-9" class="carrusel-dot"></label>
+                                      <label for="slide-10" class="carrusel-dot"></label>
+                                      <label for="slide-11" class="carrusel-dot"></label>
+                                      <label for="slide-12" class="carrusel-dot"></label>
+                                  </div>
+                              </div>
+                            </div>
+                        </div>
+                    </fieldset>
+    
+                    <fieldset class="resumen-cotizacion">
+                        <legend>Resumen de Cotización</legend>
+                        <div class="instruccion">
+                            <p><i class="fas fa-info-circle"></i> Complete las cantidades e imprima esta página para obtener su cotización con los totales calculados</p>
+                        </div>
+                        <div class="hoja-calculo">
+                            <table id="tabla-resumen">
+                                <thead>
+                                    <tr>
+                                        <th>Producto</th>
+                                        <th>Cantidad</th>
+                                        <th>Precio Unit.</th>
+                                        <th>Subtotal</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="cuerpo-resumen">
+                                       <!-- Los productos seleccionados aparecerán aquí dinámicamente -->
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td colspan="3">Subtotal:</td>
+                                        <td>S/ <span class="total-subtotal">0.00</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3">IGV (18%):</td>
+                                        <td>S/ <span class="total-igv">0.00</span></td>
+                                    </tr>
+                                    <tr class="total-final">
+                                        <td colspan="3">TOTAL:</td>
+                                        <td>S/ <span class="total-general">0.00</span></td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </fieldset>
+    
+                    <fieldset>
+                        <legend>Información Adicional</legend>
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje o Requerimientos Especiales:</label>
+                            <textarea id="mensaje" name="mensaje" rows="4"></textarea>
+                        </div>
+                    </fieldset>
+    
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-primary" onclick="window.print()">
+                            <i class="fas fa-print"></i> Imprimir Cotización
+                        </button>
+                        <button type="reset" class="btn btn-secondary">
+                            <i class="fas fa-redo"></i> Limpiar Formulario
+                        </button>
+                    </div>
+                </form>
+            </main>
+        </div>
+    
+        <footer>
+            <div class="footer-container">
+                <p>© 2025 SOLFIX PERU S.A.C. - Todos los derechos reservados.</p>
+                <p><i class="fas fa-phone"></i> (01) 123-4567 | <i class="fas fa-envelope"></i> info@solfix.com</p>
+            </div>
+            
+            <!-- Imagen del Libro de Reclamaciones -->
+            <div style="text-align: center; padding: 15px;">
+              <a href="libroreclamos.html" title="Libro de Reclamaciones">
+                <img src="IMAGENES1/Librorecla.png" alt="Libro de Reclamaciones" style="width: 120px;">
+              </a>
+              <p style="font-size: 14px;">Libro de Reclamaciones</p>
+            </div>
+            
+            <div class="fullscreen-buttons">
+                <button onclick="openFullscreen()"><i class="fas fa-expand"></i> Pantalla Completa</button>
+                <button onclick="closeFullscreen()"><i class="fas fa-compress"></i> Salir</button>
+            </div>
+        </footer>
+
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Ajustar el carrusel al cargar y al redimensionar
+            function ajustarCarrusel() {
+                const carrusel = document.querySelector('.carrusel');
+                const slides = document.querySelectorAll('.productos-grid');
+                
+                // Establecer el ancho de cada slide al 100% del contenedor
+                slides.forEach(slide => {
+                    slide.style.width = `${carrusel.offsetWidth}px`;
+                });
+                
+                // Recalcular el ancho total de los slides
+                document.querySelector('.slides').style.width = `${slides.length * 100}%`;
+            }
+            
+            // Calcular subtotales y actualizar resumen
+            function calcularSubtotales() {
+                const productos = document.querySelectorAll('.product-card');
+                const cuerpoResumen = document.getElementById('cuerpo-resumen');
+                let subtotalGeneral = 0;
+                
+                // Limpiar el resumen antes de volver a calcular
+                cuerpoResumen.innerHTML = '';
+                
+                productos.forEach(producto => {
+                    const nombre = producto.querySelector('h3').textContent;
+                    const precio = parseFloat(producto.querySelector('.precio').textContent);
+                    const inputCantidad = producto.querySelector('.cantidad');
+                    const inputSubtotal = producto.querySelector('.subtotal input');
+                    
+                    // Calcular subtotal cuando cambia la cantidad
+                    inputCantidad.addEventListener('input', function() {
+                        const cantidad = parseFloat(this.value) || 0;
+                        const subtotal = (precio * cantidad).toFixed(2);
+                        inputSubtotal.value = subtotal;
+                        actualizarResumen();
+                        calcularTotales();
+                    });
+                    
+                    // Agregar al resumen si tiene cantidad > 0
+                    if (parseFloat(inputCantidad.value) > 0) {
+                        const cantidad = parseFloat(inputCantidad.value);
+                        const subtotal = (precio * cantidad).toFixed(2);
+                        subtotalGeneral += parseFloat(subtotal);
+                        
+                        const fila = document.createElement('tr');
+                        fila.innerHTML = `
+                            <td>${nombre}</td>
+                            <td>${cantidad}</td>
+                            <td>S/ ${precio.toFixed(2)}</td>
+                            <td>S/ ${subtotal}</td>
+                        `;
+                        cuerpoResumen.appendChild(fila);
+                    }
+                });
+            }
+            
+            // Actualizar el resumen de productos seleccionados
+            function actualizarResumen() {
+                const productos = document.querySelectorAll('.product-card');
+                const cuerpoResumen = document.getElementById('cuerpo-resumen');
+                
+                // Limpiar el resumen
+                cuerpoResumen.innerHTML = '';
+                
+                productos.forEach(producto => {
+                    const nombre = producto.querySelector('h3').textContent;
+                    const precio = parseFloat(producto.querySelector('.precio').textContent);
+                    const cantidad = parseFloat(producto.querySelector('.cantidad').value) || 0;
+                    
+                    if (cantidad > 0) {
+                        const subtotal = (precio * cantidad).toFixed(2);
+                        
+                        const fila = document.createElement('tr');
+                        fila.innerHTML = `
+                            <td>${nombre}</td>
+                            <td>${cantidad}</td>
+                            <td>S/ ${precio.toFixed(2)}</td>
+                            <td>S/ ${subtotal}</td>
+                        `;
+                        cuerpoResumen.appendChild(fila);
+                    }
+                });
+            }
+            
+            // Calcular totales generales
+            function calcularTotales() {
+                let subtotal = 0;
+                const inputsSubtotal = document.querySelectorAll('.subtotal input');
+                
+                inputsSubtotal.forEach(input => {
+                    subtotal += parseFloat(input.value) || 0;
+                });
+                
+                const igv = subtotal * 0.18;
+                const total = subtotal + igv;
+                
+                document.querySelector('.total-subtotal').textContent = subtotal.toFixed(2);
+                document.querySelector('.total-igv').textContent = igv.toFixed(2);
+                document.querySelector('.total-general').textContent = total.toFixed(2);
+            }
+            
+            // Limpiar todo el formulario
+            function limpiarFormulario() {
+                // Limpiar campos de entrada
+                document.querySelectorAll('input[type="text"]').forEach(input => {
+                    input.value = '';
+                });
+                
+                // Limpiar subtotales
+                document.querySelectorAll('.subtotal input').forEach(input => {
+                    input.value = '0.00';
+                });
+                
+                // Limpiar resumen
+                document.getElementById('cuerpo-resumen').innerHTML = '';
+                
+                // Limpiar totales
+                document.querySelector('.total-subtotal').textContent = '0.00';
+                document.querySelector('.total-igv').textContent = '0.00';
+                document.querySelector('.total-general').textContent = '0.00';
+            }
+            
+            // Configurar el botón de limpiar
+            document.querySelector('button[type="reset"]').addEventListener('click', limpiarFormulario);
+            
+            // Inicializar
+            window.addEventListener('load', ajustarCarrusel);
+            window.addEventListener('resize', ajustarCarrusel);
+            calcularSubtotales();
+        });
+        </script>
+
+                <!-- Audio de fondo con controles -->
+        <audio id="backgroundAudio" loop>
+        <source src="AUDIO/music-background-peaceful.mp3" type="audio/mp3">
+        </audio>
+
+        <!-- Controles de audio flotantes -->
+        <div class="audio-controls">
+        <button id="toggleAudio" aria-label="Reproducir/Pausar sonido de fondo">
+            <i class="fas fa-volume-up"></i>
+        </button>
+        <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="0.3" aria-label="Control de volumen">
+        </div>
+
+        <script src="JS/multimedia.js"></script>
+    </body>
+</html>

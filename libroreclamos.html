@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>LIBRO RECLAMACIONES | SOLFIX PERÚ S.A.C.</title>
+        <link rel="stylesheet" href="ESTILO1/index.css">
+        <link rel="icon" href="IMAGENES1/logo2.jpg" type="image/x-icon">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link rel="stylesheet" href="ESTILO1/carrito.css">
+        <script src="JS/carrito.js"></script>
+        <script src="JS/Menu.js"></script>
+    </head>
+    <body>
+        <header>
+          <div class="header-container">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="IMAGENES1/logo2.jpg" alt="Logo Solfix Perú" class="logo">
+                </a>
+            </div>
+          </div>
+        </header>
+
+        <!-- Ícono en la parte superior derecha -->
+        <div class="icon-container">
+             <img src="IMAGENES1/carrito.png" alt="Carrito de Compras" id="iconoCarrito">
+        </div>
+                        
+        <main class="main-content">
+          <section class="claims-form">
+            <h2>Libro de Reclamaciones</h2>
+
+            <!-- FORMULARIO ACTUALIZADO CON ID -->
+            <form class="claims-form" id="formReclamo">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Nombre completo:</label>
+                  <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                  <label for="dni">DNI:</label>
+                  <input type="text" id="dni" name="dni" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Teléfono:</label>
+                <input type="tel" id="phone" name="phone">
+              </div>
+
+              <div class="form-group">
+                <label for="claim">Detalle de su reclamo:</label>
+                <textarea id="claim" name="claim" rows="5" required></textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="file">Adjuntar archivo (opcional):</label>
+                <input type="file" id="file" name="file">
+              </div>
+
+              <button type="submit" class="submit-button">Enviar Reclamo</button>
+            </form>
+          </section>
+        </main>
+        <footer class="footer">
+            <div class="footer-container">
+
+              <div class="footer-section">
+                <h3>Solfix Perú</h3>
+                <p>Líderes en soluciones para la construcción desde 2008.</p>
+                <div class="social-icons">
+                  <a href="https://www.facebook.com/profile.php?id=61576134625128&mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a>
+                  <a href="https://www.instagram.com/solfixperusac/"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-whatsapp"></i></a>
+                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+              </div>
+
+              <div class="footer-section">
+                <h3>Enlaces Rápidos</h3>
+                <ul class="footer-links">
+                  <li><a href="index.html">Inicio</a></li>
+                  <li><a href="productos.html">Productos</a></li>
+                  <li><a href="servicios.html">Servicios</a></li>
+                  <li><a href="contacto.html">Contacto</a></li>
+                  <li><a href="nosotros.html">Nosotros</a></li>
+                  <li><a href="cotizaciones.html">Cotizaciones</a></li>
+                  <li><a href="nuestras-tiendas.html">Nuestras Tiendas</a></li>
+                  <li><a href="novedades.html">Novedades</a></li>
+                  <li><a href="faq.html">FAQ</a></li>
+                  <li><a href="trabaja-con-nosotros.html">Trabaja con Nosotros</a></li>
+                </ul>
+              </div>
+
+              <div class="footer-section">
+                <h3>Contacto</h3>
+                <p><i class="icon-map-marker"></i> Calle Francisco Bolognesi, Arequipa, Perú</p>
+                <p><i class="icon-phone"></i> (01) 456-7890</p>
+                <p><i class="icon-envelope"></i> info@solfix.pe</p>
+              </div>
+
+              <div class="footer-section">
+                <h3>Boletín Informativo</h3>
+                <form class="newsletter-form">
+                  <input type="email" placeholder="Tu correo electrónico" required>
+                  <button type="submit">Suscribirse</button>
+                </form>
+              </div>
+            </div>
+
+            <div class="footer-bottom">
+              <p>&copy; 2025 SOLFIX PERU S.A.C. - Todos los derechos reservados.</p>
+              <p><a href="politicas.html">Políticas de Privacidad</a> | <a href="terminos.html">Términos de Servicio</a></p>
+            </div>
+
+            <!-- Imagen del Libro de Reclamaciones -->
+            <div style="text-align: center; padding: 15px;">
+              <a href="libroreclamos.html" title="Libro de Reclamaciones">
+                <img src="IMAGENES1/Librorecla.png" alt="Libro de Reclamaciones" style="width: 120px;">
+              </a>
+              <p style="font-size: 14px;">Libro de Reclamaciones</p>
+            </div>
+            
+            <div class="fullscreen-buttons">
+                <button onclick="openFullscreen()"><i class="fas fa-expand"></i> Pantalla Completa</button>
+                <button onclick="closeFullscreen()"><i class="fas fa-compress"></i> Salir</button>
+            </div>
+        </footer>
+
+        <!-- AUDIO DE FONDO CON CONTROLES -->
+        <audio id="backgroundAudio" loop>
+          <source src="AUDIO/music-background-peaceful.mp3" type="audio/mp3">
+        </audio>
+
+        <div class="audio-controls">
+          <button id="toggleAudio" aria-label="Reproducir/Pausar sonido de fondo">
+            <i class="fas fa-volume-up"></i>
+          </button>
+          <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="0.3" aria-label="Control de volumen">
+        </div>
+
+        <script src="JS/librorecla.js"> </script>
+        <script src="JS/multimedia.js"></script>
+    </body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>NUESTRAS TIENDAS | SOLFIX PERU S.A.C.</title>
+        <link rel="icon" href="IMAGENES1/logo2.jpg" type="image/x-icon">
+        <link rel="stylesheet" href="ESTILO1/style.css">
+        <link rel="stylesheet" href="ESTILO1/contactservice.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link rel="stylesheet" href="ESTILO1/carrito.css">
+        <script src="JS/carrito.js"></script>
+        <script src="JS/Menu.js"></script>
+    </head>
+    <body>
+        <header>
+          <div class="header-container">
+            <div class="logo-container">
+              <img src="IMAGENES1/logo2.jpg" alt="Logo" class="logo">
+              <h1 class="titulo-principal">Nuestras Tiendas</h1>
+            </div>
+            <nav class="topnav" id="myTopnav">
+                <a href="index.html">Inicio</a>
+                <a href="productos.html">Productos</a>
+                <a href="servicios.html">Servicios</a>
+                <a href="contacto.html">Contacto</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="cotizaciones.html">Cotizaciones</a>
+                <a href="nuestras-tiendas.html" class="active">Nuestras Tiendas</a>
+                <a href="novedades.html">Novedades</a>
+                <a href="faq.html">FAQ</a>
+                <a href="trabaja-con-nosotros.html">Trabaja con Nosotros</a>
+                <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </nav>
+          </div>
+        </header>
+                 <!-- Ícono en la parte superior derecha -->
+                  <div class="icon-container">
+                      <img src="IMAGENES1/carrito.png" alt="Carrito de Compras" id="iconoCarrito">
+                  </div>
+        <div class="mensajeT-contacto cuadro">
+                          Conoce nuestras tiendas y puntos de recojo
+              </div>
+        <p>
+            Consulta los horarios y direcciones de nuestros establecimientos en todo el país. ¡Siempre estaremos encantados de recibirte!
+            
+        </p> 
+            
+        <section class="grid-tiendas">
+          <div class="tienda">
+            <img src="IMAGENES1/tienda1.jpg" alt="Tienda Lima">
+            <h3>Tienda Lima</h3>
+            <p>Av. Principal, Lima, Perú</p>
+          </div>
+          <div class="tienda">
+            <img src="IMAGENES1/tienda2.jpg" alt="Tienda Arequipa">
+            <h3>Tienda Arequipa</h3>
+            <p> Calle Francisco Bolognesi, Arequipa, Perú</p>
+          </div>
+          <div class="tienda">
+            <img src="IMAGENES1/tienda3.jpg" alt="Tienda Trujillo">
+            <h3>Tienda Trujillo</h3>
+            <p>Calle Los Andes 789, Trujillo, Perú</p>
+          </div>
+        </section>
+  
+        <!-- Carrusel -->
+    <div class="carrusel">
+      <div class="slides">
+        <div class="slide">
+          <img src="IMAGENES1/interior1.jpg" alt="Interior Tienda Lima">
+          <div class="texto">Interior Tienda Lima</div>
+        </div>
+        <div class="slide">
+          <img src="IMAGENES1/interior2.jpg" alt="Interior Tienda Arequipa">
+          <div class="texto">Interior Tienda Arequipa</div>
+        </div>
+        <div class="slide">
+          <img src="IMAGENES1/interior3.jpg" alt="Interior Tienda Trujillo">
+          <div class="texto">Interior Tienda Trujillo</div>
+        </div>
+      </div>
+    </div>
+        
+                <!-- Controles de Funcionalidades -->
+         <script src="JS/funcionalidades.js"></script>
+            <script>
+              document.addEventListener("DOMContentLoaded", () => {
+                cambiarTituloSiExiste();
+                mostrarServiciosEnPagina(); // ahora también en la página
+              });
+            </script>
+
+        <button onclick="mostrarVentana()">Mostrar Información</button>
+
+        <div id="ventana-flotante">
+          <p>Consulta de horario de atención:</p>
+          <button onclick="verificarAtencion(prompt('¿Qué día deseas consultar?'))">Consultar Día</button>
+          <button onclick="cerrarVentana()">Cerrar</button>
+        </div>
+
+        <footer>
+            <div class="footer-container">
+              <p>© 2025 SOLFIX PERU S.A.C. - Todos los derechos reservados.</p>
+              <p><i class="fas fa-phone"></i> (01) 123-4567 | <i class="fas fa-envelope"></i> info@solfix.com</p>
+            </div>
+
+            <!-- Imagen del Libro de Reclamaciones -->
+            <div style="text-align: center; padding: 15px;">
+                <a href="libroreclamos.html" title="Libro de Reclamaciones">
+                    <img src="IMAGENES1/Librorecla.png" alt="Libro de Reclamaciones" style="width: 120px;">
+                </a>
+                <p style="font-size: 14px;">Libro de Reclamaciones</p>
+            </div>
+            
+            <div class="fullscreen-buttons">
+                <button onclick="openFullscreen()"><i class="fas fa-expand"></i> Pantalla Completa</button>
+                <button onclick="closeFullscreen()"><i class="fas fa-compress"></i> Salir</button>
+            </div>
+        </footer>
+  
+          <!-- Audio de fondo con controles -->
+        <audio id="backgroundAudio" loop>
+        <source src="AUDIO/music-background-peaceful.mp3" type="audio/mp3">
+        </audio>
+
+        <!-- Controles de audio flotantes -->
+        <div class="audio-controls">
+        <button id="toggleAudio" aria-label="Reproducir/Pausar sonido de fondo">
+            <i class="fas fa-volume-up"></i>
+        </button>
+        <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="0.3" aria-label="Control de volumen">
+        </div>
+
+        <script src="JS/multimedia.js"></script>
+        
+
+    </body>
+</html>

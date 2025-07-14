@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>REALIZAR COMPRA | SOLFIX PERÚ S.A.C.</title>
+        <link rel="stylesheet" href="ESTILO1/realizarcompra.css">
+        <link rel="icon" href="IMAGENES1/logo2.jpg" type="image/x-icon">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link rel="icon" href="IMAGENES1/carrito.png" type="image/x-icon">
+            <link rel="stylesheet" href="ESTILO1/carrito.css">
+            <script src="JS/carrito.js"></script>
+    </head>
+    <body>
+        <header>
+            <div class="header-container">
+                <div class="logo-container">
+                    <img src="IMAGENES1/logo2.jpg" alt="Logo CONSTRUCTEC PERU S.A.C." class="logo">
+                    <h1 class="titulo-principal">Realizar Compra</h1>                    
+                </div>
+            </div>   
+        </header>
+        
+                        <!-- Ícono en la parte superior derecha -->
+                  <div class="icon-container">
+                      <img src="IMAGENES1/carrito.png" alt="Carrito de Compras" id="iconoCarrito">
+                  </div>
+                        
+        <div style="margin-top: 20px;">
+            <a href="carrito.html">
+                <button class="boton-carrito">🛍 Ver Carrito</button></a>
+            <a href="productos.html">
+                <button class="boton-produ">🛒 Ver Productos</button> </a>
+        </div>
+        
+        <p>Productos seleccionados en el carrito: <span id="carrito-count">0</span></p>
+        
+        <main>
+            <div class="producto">
+                <img src="IMAGENES1/Altamira.png" alt="Piso Altamira">
+                <h4>Piso Altamira Blanco 45x45 Caja: 2.23 m<sup>2</sup></h4>
+                <p>S/31.00 x m<sup>2</sup></p>
+                <p>Precio por caja: S/69.13</p>
+                <button onclick="agregarAlCarrito('Piso Altamira Blanco', 69.13)">Agregar al carrito</button>
+            </div>
+
+            <div class="producto">
+                <img src="IMAGENES1/ArceNat.png" alt="Piso Cerámico 2">
+                <h4>Piso Arce Natural Comercial 60x60 Caja: 1.80 m<sup>2</sup></h4>
+                <p>S/22.50 x m<sup>2</sup></p>
+                <p>Precio por caja: S/40.50</p>
+                <button onclick="agregarAlCarrito('Piso Arce Natural', 40.50)">Agregar al carrito</button>
+            </div>
+
+            <div class="producto">
+                <img src="IMAGENES1/AteGri.png" alt="Piso Cerámico 2">
+                <h4>Piso Atenas Gris 45x45 Caja: 2.23 m<sup>2</sup></h4>
+                <p>S/25.50 x m<sup>2</sup></p>
+                <p>Precio por caja: S/56.87</p>
+                <button onclick="agregarAlCarrito('Piso Atenas Gris', 56.87)">Agregar al carrito</button>
+            </div>
+            
+            <div class="producto">
+                <img src="IMAGENES1/AteMarfil.png" alt="Piso Cerámico 4">
+                <h4>Piso Atenas Marfil 45x45 Caja: 2.23 m<sup>2</sup></h4>
+                <p>S/25.50 x m<sup>2</sup></p>
+                <p>Precio por caja: S/56.87</p>
+                <button onclick="agregarAlCarrito('Piso Atenas Gris', 56.87)">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="IMAGENES1/Brasilia.png" alt="Piso Cerámico 5">
+                <h4>Piso Brasilia Natural Ext. 45x45 - Celima Caja: 2.23 m<sup>2</sup></h4>
+                <p>S/24.60 x m<sup>2</sup></p>
+                <p>Precio por caja: S/54.86</p>
+                <button onclick="agregarAlCarrito('Piso Atenas Gris', 56.87)">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="IMAGENES1/Bristol.png" alt="Piso Cerámico 6">
+                <h4>Piso Bristol Caramelo 60x60 Caja: 1.8 m<sup>2</sup></h4>
+                <p>S/32.50 x m<sup>2</sup></p>
+                <p>Precio por caja: S/58.50</p>
+                <button onclick="agregarAlCarrito('Piso Atenas Gris', 56.87)">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="IMAGENES1/CaobaBeige.png" alt="Piso Cerámico 7">
+                <h4>Piso Caoba Beige Com. 60x60 - Celima Caja: 1.8 m<sup>2</sup></h4>
+                <p>S/20.00 x m<sup>2</sup></p>
+                <p>Precio por caja: S/36.00</p>
+                <button onclick="agregarAlCarrito('Piso Atenas Gris', 56.87)">Agregar al carrito</button>
+            </div>
+        </main>
+        
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-section">
+                    <h3>Solfix Perú</h3>
+                    <p>Líderes en soluciones para la construcción desde 2008.</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/profile.php?id=61576134625128&mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/solfixperusac/"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="productos.html">Productos</a></li>
+                        <li><a href="servicios.html">Servicios</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>                        
+                        <li><a href="cotizaciones.html">Cotizaciones</a></li>
+                        <li><a href="nuestras-tiendas.html">Nuestras Tiendas</a></li>
+                        <li><a href="novedades.html">Novedades</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <p><i class="icon-map-marker"></i> Calle Francisco Bolognesi, Arequipa, Perú</p>
+                    <p><i class="icon-phone"></i> (01) 456-7890</p>
+                    <p><i class="icon-envelope"></i> info@solfix.pe</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Boletin Informativo</h3>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Tu correo electrónico" required>
+                        <button type="submit">Suscribirse</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 SOLFIX PERU S.A.C. - Todos los derechos reservados.</p>
+                <p><a href="politicas.html">Políticas de Privacidad</a> | <a href="terminos.html">Términos de Servicio</a></p>
+            </div>
+            
+            <!-- Imagen del Libro de Reclamaciones -->
+            <div style="text-align: center; padding: 15px;">
+                <a href="libroreclamos.html" title="Libro de Reclamaciones">
+                  <img src="IMAGENES1/Librorecla.png" alt="Libro de Reclamaciones" style="width: 120px;">
+                </a>
+                <p style="font-size: 14px;">Libro de Reclamaciones</p>
+            </div>
+            
+            <div class="fullscreen-buttons">
+                <button onclick="openFullscreen()"><i class="fas fa-expand"></i> Pantalla Completa</button>
+                <button onclick="closeFullscreen()"><i class="fas fa-compress"></i> Salir</button>
+            </div>
+        </footer>
+        
+        <!-- Audio de fondo con controles -->
+        <audio id="backgroundAudio" loop>
+            <source src="AUDIO/music-background-peaceful.mp3" type="audio/mp3">
+        </audio>
+
+        <!-- Controles de audio flotantes -->
+        <div class="audio-controls">
+            <button id="toggleAudio" aria-label="Reproducir/Pausar sonido de fondo">
+                <i class="fas fa-volume-up"></i>
+            </button>
+            <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="0.3" aria-label="Control de volumen">
+        </div>
+        
+        <script>
+            let carrito = [];
+
+            function agregarAlCarrito(nombre, precio) {
+              carrito.push({ nombre, precio });
+              alert(`Producto agregado: ${nombre}\nPrecio: S/${precio}`);
+              document.getElementById('carrito-count').textContent = carrito.length;
+              localStorage.setItem('carritoSolfix', JSON.stringify(carrito));
+            }
+
+            // Restaurar productos del carrito si ya existen
+            document.addEventListener('DOMContentLoaded', function () {
+              const datosGuardados = localStorage.getItem('carritoSolfix');
+              if (datosGuardados) {
+                carrito = JSON.parse(datosGuardados);
+                document.getElementById('carrito-count').textContent = carrito.length;
+              }
+            });
+        </script>
+        
+        <script src="JS/multimedia.js"></script>
+    </body>
+</html>
+

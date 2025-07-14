@@ -1,0 +1,497 @@
+/* ---------- Estilos Generales Compartidos ---------- */
+
+/* Header */
+header, .header {
+  background-color: #004b87;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 16px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+header *:not(.fondo-transparente) {
+  position: relative;
+  z-index: 1;
+}
+
+.fondo-transparente {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.4;
+  z-index: 0;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.logo {
+  height: 60px;
+  border-radius: 10px;
+}
+
+.titulo-principal {
+  font-size: 28px;
+  color: white;
+  margin: 0;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  margin: 0 12px;
+}
+
+nav ul li a {
+  color: white;
+  font-weight: 600;
+  padding: 8px;
+  display: block;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: #ffcc00;
+  font-weight: 600;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  background-color: #002b4e;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ---------- Página de Contacto ---------- */
+.mensajeT-contacto {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.mensajeN-contacto {
+  font-size: 15px;
+  font-weight: normal;
+  text-align: center;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 10px;
+}
+
+.info-contacto {
+  background-color: #e6e6e6;
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-right: 30px;
+}
+
+.contenedor-flex {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 25px;
+  margin-top: 35px;
+}
+
+.bloque-formulario {
+  text-align: center;
+  margin: 40px auto;
+  max-width: 800px;
+}
+
+.bloque-formulario .mensajeT-contacto {
+  margin-bottom: 20px;
+}
+
+.form-contacto {
+  display: inline-block;
+  text-align: left;
+  background-color: #f5f5f5;
+  padding: 30px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contenedor-mapa {
+  text-align: center;
+  margin: 40px auto;
+}
+
+/* ---------- Página de Servicios ---------- */
+.mensajeN-servicio {
+  font-size: 15px;
+  font-weight: normal;
+  text-align: left;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 10px;
+}
+
+.contact-link {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.contact-link a {
+  color: #004080;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.contact-link .mensaje-img {
+  display: block;
+  margin: 0 auto;
+  width: 50px;
+  height: auto;
+}
+
+.servicio-detallado {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin: 40px;
+}
+
+.servicio {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.servicio:nth-child(even) {
+  flex-direction: row-reverse;
+}
+/* */
+.servicio .texto {
+  flex: 1;
+  font-family: Montserrat, sans-serif; /* <-- Aquí puedes cambiar por 'Montserrat' */
+}
+
+.servicio .texto h2 {
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.servicio .texto p {
+  color: #444;
+  line-height: 1.6;
+}
+
+.servicio .imagen {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.servicio .imagen img {
+  width: 100%;
+  max-width: 400px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ---------- Utilidades ---------- */
+.cuadro {
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.container {
+  width: 100%;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+  margin-bottom: 1px;
+  align-items: flex-start;
+}
+
+.box {
+  padding: 5px 10px;
+  height: 80px;
+  border: 1px solid white;
+  background-color: sandybrown;
+  text-align: left;
+  box-sizing: border-box;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.productos-fieldset {
+  overflow-x: hidden;
+  width: 1%;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/*Avance 2*/
+
+
+/*Animacion de texto*/
+p{
+    animation-duration: 3s;
+    animation-name: slidein;
+}
+
+@keyframes slidein {
+    from{
+        margin-left: 100%;
+        width: 300%;
+    }
+    to{
+       margin-left: 0%;
+       width: 100%; 
+    }
+}
+/* Carrusel */
+.carrusel {
+  margin: 20px auto;
+  width: 100%;
+  max-width: 720px;
+  height: auto;
+  aspect-ratio: 3/4; /* Mantener la proporción de las imágenes */
+  overflow: hidden;   /* Evitar el desbordamiento horizontal */
+}
+
+.carrusel .slides {
+  display: flex;
+  width: 300%; /* Tres imágenes, el contenedor tiene un ancho del 300% */
+  height: 100%;
+  animation: slide 45s infinite ease-in-out; /* Ajustamos la duración a 45s para que la animación sea más suave */
+}
+
+.carrusel .slide {
+  width: 33.33%; /* Asegura que cada imagen ocupe un tercio del contenedor */
+  height: 100%;
+  position: relative;
+  flex-shrink: 0; /* Evitar que las imágenes se encojan */
+}
+
+.carrusel .slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Asegura que la imagen se ajusta al contenedor sin recorte y sin zoom */
+  margin: 0; /* Eliminar márgenes adicionales entre imágenes */
+}
+
+.carrusel .texto {
+  position: absolute;
+  bottom: 10px; /* Espacio desde la parte inferior de la imagen */
+  left: 0;
+  width: 100%;
+  text-align: center; /* Centra el texto */
+  color: white; /* Color blanco para el texto */
+  font-size: 18px; /* Tamaño del texto */
+  font-weight: bold; /* Hacer el texto más grueso */
+  background: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente para mejor visibilidad del texto */
+  padding: 5px 0;
+}
+
+@keyframes slide {
+  0%   { transform: translateX(0); }             /* Primera imagen visible al inicio */
+  33.33%  { transform: translateX(-100%); }         /* Segunda imagen visible */
+  66.66%  { transform: translateX(-200%); }         /* Tercera imagen visible */
+  100% { transform: translateX(0); }             /* Vuelve a la primera imagen */
+}
+/* Imagen responsivo */
+.grid-tiendas img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px; /* Opcional, para esquinas redondeadas */
+}
+
+.grid-tiendas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.tienda {
+  text-align: center;
+}
+
+.tienda h3 {
+  margin: 10px 0 5px;
+}
+
+.tienda p {
+  margin: 0;
+}
+/*Grip en Servicios*/
+.grid-container video {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ajusta 300px o el tamaño que desees */
+  gap: 20px;
+  padding: 20px;
+}
+
+/*Grillas*/
+
+.grid-servicios-adicionales {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.tarjeta-servicio {
+  background: #f5f5f5;
+  padding: 15px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.tarjeta-servicio img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.tarjeta-servicio h3 {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.tarjeta-servicio p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Animación para el logo */
+.logo {
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: rotate(5deg) scale(1.05);
+}
+
+/* Estilos para controles de audio */
+.audio-controls {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: rgba(0, 75, 135, 0.8);
+  padding: 10px 15px;
+  border-radius: 30px;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  animation: fadeIn 1s ease-out;
+}
+
+.audio-controls button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+  transition: transform 0.3s;
+}
+
+.audio-controls button:hover {
+  transform: scale(1.2);
+}
+
+.audio-controls input[type="range"] {
+  width: 80px;
+  cursor: pointer;
+}
+
+/* Efecto para cuando el audio está muteado */
+.audio-muted .audio-controls {
+  opacity: 0.7;
+}
+
+
+/* Nuevo estilo*/
+/* r. Estilo para ventana flotante */
+#ventana-flotante {
+  display: none;
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  background-color: #fff;
+  border: 2px solid #333;
+  padding: 20px;
+  z-index: 999;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+#ventana-flotante button {
+  margin: 5px;
+  padding: 8px 12px;
+}
+/* LIsta en servicios */
+#lista-servicios-js {
+  background: #f2f2f2;
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin: 20px 0;
+  border-radius: 8px;
+}
+#lista-servicios-js ul {
+  list-style-type: square;
+  padding-left: 20px;
+}

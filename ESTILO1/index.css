@@ -1,0 +1,714 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Klavika', Arial, sans-serif;
+}
+
+body { 
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+h1 { font-size: 40px; }
+h2 { font-size: 32px; }
+h3 { font-size: 28px; }
+h4 { font-size: 24px; }
+
+p {
+    margin-bottom: 16px;
+}
+
+
+
+/* Estilos para el header */
+header {
+    background-color: #004b87;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 16px 0;
+    text-align: center;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.logo {
+    height: 60px;
+    border-radius: 10px;
+}
+
+.titulo-principal {
+    font-size: 28px;
+    color: white;
+    margin: 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 12px;
+}
+
+nav ul li a {
+    color: white;
+    font-weight: 600;
+    padding: 8px;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #ffcc00;
+}
+
+
+/* Hero Banner */
+.hero-banner {
+    background-image: linear-gradient(rgba(48, 48, 48, 0.5), rgba(43, 43, 43, 0.5)), url('../IMAGENES1/BannerSelladores.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    position: relative;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.hero-content h2 {
+    font-size: 40px;
+    margin-bottom: 16px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 32px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #ff8000;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #e67300;
+}
+
+/* Contenido principal */
+.main-content {
+    max-width: 1200px;
+    margin: 32px auto;
+    padding: 0 16px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 32px;
+    color: #003366;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+.section-title:after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 3px;
+    background-color: #0066cc;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Productos destacados */
+.featured-products {
+    margin-bottom: 48px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+}
+
+.product-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-card h3 {
+    padding: 0 16px;
+    margin-top: 16px;
+}
+
+.product-card p {
+    padding: 0 16px;
+    color: #666;
+}
+
+.product-link {
+    display: inline-block;
+    margin: 16px;
+    color: #0066cc;
+    font-weight: 600;
+}
+
+/* Layout de contenido */
+.content-wrapper {
+    display: flex;
+    gap: 32px;
+    margin-bottom: 48px;
+}
+
+.main-section {
+    flex: 3;
+}
+
+.sidebar {
+    flex: 1;
+}
+
+/* Sección "Sobre nosotros" */
+.about-us {
+    background-color: white;
+    padding: 32px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 32px;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 16px;
+    font-weight: 600;
+}
+
+/* Sección de video */
+.video-section {
+    margin-bottom: 32px;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+}
+
+/* Slider de proyectos */
+.project-slider {
+    display: flex;
+    overflow-x: auto;
+    gap: 16px;
+    padding-bottom: 16px;
+    scroll-snap-type: x mandatory;
+}
+
+.project-slide {
+    min-width: 300px;
+    scroll-snap-align: start;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.project-slide img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-slide h3 {
+    padding: 8px 16px 0;
+}
+
+.project-slide p {
+    padding: 0 16px 16px;
+    color: #666;
+}
+
+/* Testimonios */
+.testimonials {
+    background-color: #f0f7ff;
+    padding: 32px;
+    border-radius: 8px;
+    margin-bottom: 32px;
+}
+
+.testimonial blockquote {
+    font-style: italic;
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 32px;
+}
+
+.testimonial blockquote:before {
+    content: '"';
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 48px;
+    line-height: 1;
+    color: #0066cc;
+    opacity: 0.3;
+}
+
+.testimonial cite {
+    font-weight: 600;
+    color: #0066cc;
+}
+
+/* Sidebar */
+.sidebar-widget {
+    background-color: white;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 32px;
+}
+
+.sidebar-widget h3 {
+    color: #003366;
+    margin-bottom: 16px;
+    font-size: 20px;
+}
+
+.marquee-container {
+    height: 100px;
+    overflow: hidden;
+}
+
+.marquee-container p {
+    margin-bottom: 24px;
+}
+
+.quick-form input,
+.quick-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.quick-form textarea {
+    min-height: 100px;
+}
+
+.quick-form button {
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.quick-form button:hover {
+    background-color: #004499;
+}
+
+/* Marcas */
+.brands {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.brand-logos {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    flex-wrap: wrap;
+    margin-top: 32px;
+}
+
+.brand-logos img {
+    height: 60px;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: filter 0.3s, opacity 0.3s;
+}
+
+.brand-logos img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+/* Formulario de reclamos */
+.claims-form {
+    background-color: white;
+    padding: 32px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 48px;
+}
+
+.claims-form h2 {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.form-row {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.form-group {
+    flex: 1;
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.form-group textarea {
+    min-height: 150px;
+}
+
+.submit-button {
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    padding: 12px 32px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #004499;
+}
+
+/* Footer */
+.footer {
+    background-color: #004b87;
+    color: white;
+    padding: 48px 0 0;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 32px;
+}
+
+.footer-section h3 {
+    color: white;
+    margin-bottom: 24px;
+    font-size: 20px;
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.footer-links a {
+    color: #ccc;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.social-icons {
+    margin-top: 16px;
+    display: flex;
+    gap: 16px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ff6600;
+}
+
+.newsletter-form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 8px;
+    border: none;
+    border-radius: 4px;
+}
+
+.newsletter-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.newsletter-form button:hover {
+    background-color: #cc5200;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 24px 0;
+    margin-top: 32px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom p {
+    margin-bottom: 8px;
+    color: #ccc;
+}
+
+.footer-bottom a {
+    color: #ccc;
+    transition: color 0.3s;
+}
+
+.footer-bottom a:hover {
+    color: white;
+}
+
+/* Iconos (usando clases) */
+.icon-facebook:before { content: "📘"; }
+.icon-instagram:before { content: "📷"; }
+.icon-whatsapp:before { content: "💬"; }
+.icon-linkedin:before { content: "🔗"; }
+.icon-map-marker:before { content: "📍"; }
+.icon-phone:before { content: "📞"; }
+.icon-envelope:before { content: "✉️"; }
+
+/* Animaciones */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* Aplicar animaciones */
+.hero-content {
+  animation: fadeIn 1s ease-out;
+}
+
+.product-card {
+  animation: slideInUp 0.5s ease-out forwards;
+  opacity: 0;
+}
+
+/* Añadir retrasos escalonados para las tarjetas de productos */
+.product-card:nth-child(1) { animation-delay: 0.1s; }
+.product-card:nth-child(2) { animation-delay: 0.2s; }
+.product-card:nth-child(3) { animation-delay: 0.3s; }
+
+.cta-button:hover {
+  animation: pulse 1s infinite;
+}
+
+/* Animación para el logo */
+.logo {
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: rotate(5deg) scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .header-container {
+        flex-direction: column;
+    }
+    
+    .search-container {
+        margin: 16px 0;
+        width: 100%;
+    }
+    
+    .nav-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .nav-item {
+        margin: 8px;
+    }
+    
+    .content-wrapper {
+        flex-direction: column;
+    }
+    
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content h2 {
+        font-size: 32px;
+    }
+    
+    .hero-content p {
+        font-size: 16px;
+    }
+    
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .brand-logos img {
+        height: 40px;
+    }
+}
+
+/* Estilos para controles de audio */
+.audio-controls {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: rgba(0, 75, 135, 0.8);
+  padding: 10px 15px;
+  border-radius: 30px;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  animation: fadeIn 1s ease-out;
+}
+
+.audio-controls button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+  transition: transform 0.3s;
+}
+
+.audio-controls button:hover {
+  transform: scale(1.2);
+}
+
+.audio-controls input[type="range"] {
+  width: 80px;
+  cursor: pointer;
+}
+
+/* Efecto para cuando el audio está muteado */
+.audio-muted .audio-controls {
+  opacity: 0.7;
+}

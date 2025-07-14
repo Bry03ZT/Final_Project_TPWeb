@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRABAJA CON NOSOTROS | SOLFIX PERÚ S.A.C.</title>
+    <meta name="description" content="Únete al equipo de Solfix Perú. Oportunidades laborales en construcción, ventas y logística.">
+    <link rel="stylesheet" href="ESTILO1/index.css">
+    <link rel="stylesheet" href="ESTILO1/trabajo.css">
+    <link rel="stylesheet" href="ESTILO1/carrito.css">
+    <link rel="icon" href="IMAGENES1/logo2.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="IMAGENES1/logo2.jpg" alt="Logo Solfix Perú" class="logo">
+                </a>
+                <h1 class="titulo-principal">Únete a Nuestro Equipo</h1>
+            </div>
+            <nav class="topnav" id="myTopnav">
+                <a href="index.html">Inicio</a>
+                <a href="productos.html">Productos</a>
+                <a href="servicios.html">Servicios</a>
+                <a href="contacto.html">Contacto</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="cotizaciones.html">Cotizaciones</a>
+                <a href="nuestras-tiendas.html">Nuestras Tiendas</a>
+                <a href="novedades.html">Novedades</a>
+                <a href="faq.html">FAQ</a>
+                <a href="trabaja-con-nosotros.html" class="active">Trabaja con Nosotros</a>
+                <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Ícono en la parte superior derecha -->
+    <div class="icon-container">
+        <img src="IMAGENES1/carrito.png" alt="Carrito de Compras" id="iconoCarrito">
+    </div>
+
+    <main class="main-content">
+        <section class="hero-jobs">
+            <div class="hero-content">
+                <h2>Construye tu futuro con Solfix Perú</h2>
+                <p>Buscamos talentos apasionados por la construcción y la innovación</p>
+            </div>
+        </section>
+
+        <section class="job-benefits">
+            <h2 class="section-title">Beneficios</h2>
+            <div class="benefits-grid" id="benefitsContainer">
+                <!-- Generado dinámicamente con JS -->
+            </div>
+        </section>
+
+        
+        <section class="job-openings">
+            <h2 class="section-title">Vacantes Disponibles</h2>
+            
+            <div class="filter-container">
+                <!-- Filtro existente -->
+                <select id="jobFilter" class="filter-select">
+                    <option value="all">Todas las áreas</option>
+                    <option value="ventas">Ventas</option>
+                    <option value="logistica">Logística</option>
+                    <option value="tecnico">Técnico</option>
+                    <option value="administrativo">Administrativo</option>
+                </select>
+                
+                <!-- Nuevos controles -->
+                <input type="text" id="searchInput" placeholder="Buscar por nombre" class="filter-search">
+                <input type="number" id="expFilter" placeholder="Exp. mínima (años)" min="0" class="filter-number">
+                <select id="salaryOrder" class="filter-select">
+                    <option value="">Orden salario</option>
+                    <option value="asc">Menor a mayor</option>
+                    <option value="desc">Mayor a menor</option>
+                </select>
+                <button onclick="aplicarFiltros()" class="filter-button">Aplicar</button>
+                <button onclick="resetFiltros()" class="filter-button secondary">Reset</button>
+            </div>
+            
+            <div class="jobs-container" id="jobsContainer"></div>
+        </section>
+
+        <section class="job-testimonials">
+            <h2 class="section-title">Testimonios de Nuestro Equipo</h2>
+            <div class="testimonials-slider" id="testimonialsSlider">
+                <!-- Generado dinámicamente con JS -->
+            </div>
+            <div class="slider-controls">
+                <button id="prevTestimonial" class="slider-button"><i class="fas fa-chevron-left"></i></button>
+                <button id="nextTestimonial" class="slider-button"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </section>
+
+        <section class="job-form-section">
+            <h2 class="section-title">Postula a Nuestras Vacantes</h2>
+            <form id="jobApplicationForm" class="job-application-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="applicantName">Nombre Completo*</label>
+                        <input type="text" id="applicantName" name="applicantName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="applicantEmail">Correo Electrónico*</label>
+                        <input type="email" id="applicantEmail" name="applicantEmail" required>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="applicantPhone">Teléfono*</label>
+                        <input type="tel" id="applicantPhone" name="applicantPhone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="applicantPosition">Vacante de Interés*</label>
+                        <select id="applicantPosition" name="applicantPosition" required>
+                            <option value="">Seleccione una opción</option>
+                            <!-- Opciones generadas dinámicamente con JS -->
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="applicantExperience">Experiencia Relevante (años)*</label>
+                    <input type="number" id="applicantExperience" name="applicantExperience" min="0" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="applicantMessage">¿Por qué quieres unirte a nuestro equipo?</label>
+                    <textarea id="applicantMessage" name="applicantMessage" rows="4"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="applicantResume">Subir CV (PDF)*</label>
+                    <input type="file" id="applicantResume" name="applicantResume" accept=".pdf" required>
+                </div>
+                
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="privacyPolicy" name="privacyPolicy" required>
+                    <label for="privacyPolicy">Acepto la <a href="politicas.html">Política de Privacidad</a>*</label>
+                </div>
+                
+                <button type="submit" class="submit-button">Enviar Solicitud</button>
+            </form>
+        </section>
+
+        <section class="job-process">
+            <h2 class="section-title">Nuestro Proceso de Selección</h2>
+            <div class="process-steps" id="processSteps">
+                <!-- Generado dinámicamente con JS -->
+            </div>
+        </section>
+    </main>
+
+<footer class="footer">
+            <div class="footer-container">
+                <div class="footer-section">
+                    <h3>Solfix Perú</h3>
+                    <p>Líderes en soluciones para la construcción desde 2008.</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/profile.php?id=61576134625128&mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/solfixperusac/"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="productos.html">Productos</a></li>
+                        <li><a href="servicios.html">Servicios</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>                        
+                        <li><a href="cotizaciones.html">Cotizaciones</a></li>
+                        <li><a href="nuestras-tiendas.html">Nuestras Tiendas</a></li>
+                        <li><a href="novedades.html">Novedades</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="trabaja-con-nosotros.html">Trabaja con Nosotros</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <p><i class="icon-map-marker"></i> Calle Francisco Bolognesi, Arequipa, Perú</p>
+                    <p><i class="icon-phone"></i> (01) 456-7890</p>
+                    <p><i class="icon-envelope"></i> info@solfix.pe</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Boletin Informativo</h3>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Tu correo electrónico" required>
+                        <button type="submit">Suscribirse</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 SOLFIX PERU S.A.C. - Todos los derechos reservados.</p>
+                <p><a href="politicas.html">Políticas de Privacidad</a> | <a href="terminos.html">Términos de Servicio</a></p>
+            </div>
+            
+            <!-- Imagen del Libro de Reclamaciones -->
+            <div style="text-align: center; padding: 15px;">
+              <a href="libroreclamos.html" title="Libro de Reclamaciones">
+                <img src="IMAGENES1/Librorecla.png" alt="Libro de Reclamaciones" style="width: 120px;">
+              </a>
+              <p style="font-size: 14px;">Libro de Reclamaciones</p>
+            </div>
+            
+            <div class="fullscreen-buttons">
+                <button onclick="openFullscreen()"><i class="fas fa-expand"></i> Pantalla Completa</button>
+                <button onclick="closeFullscreen()"><i class="fas fa-compress"></i> Salir</button>
+            </div>
+        </footer>
+
+    <!-- Audio de fondo con controles -->
+    <audio id="backgroundAudio" loop>
+        <source src="AUDIO/music-background-peaceful.mp3" type="audio/mp3">
+    </audio>
+    <div class="audio-controls">
+        <button id="toggleAudio" aria-label="Reproducir/Pausar sonido de fondo">
+            <i class="fas fa-volume-up"></i>
+        </button>
+        <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="0.3" aria-label="Control de volumen">
+    </div>
+
+    <!-- Ventana modal para confirmación -->
+    <div id="confirmationModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3 id="modalTitle">¡Solicitud Enviada!</h3>
+            <p id="modalMessage">Gracias por postular. Revisaremos tu información y nos pondremos en contacto contigo.</p>
+            <button id="modalCloseButton" class="modal-button">Aceptar</button>
+        </div>
+    </div>
+
+    <script src="JS/trabajo.js"></script>
+    <script src="JS/multimedia.js"></script>
+    <script src="JS/carrito.js"></script>
+</body>
+</html>

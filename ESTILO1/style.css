@@ -1,0 +1,150 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f9f9f9;
+}
+
+.banner {
+  background: url('img/banner.jpg') no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.banner h2 {
+  font-size: 2.5em;
+}
+
+.cta {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #ff8000;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 20px;
+}
+
+.destacado, .video {
+  flex: 2;
+}
+
+.destacado h2, .video h2 {
+  color: #004080;
+}
+
+.destacado img {
+  width: 45%;
+  margin: 10px;
+  border-radius: 8px;
+}
+
+.barra-lateral {
+  flex: 1;
+  background-color: #e6f2ff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+footer {
+  background-color: #004080;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+}
+
+footer .redes a {
+  margin: 0 10px;
+  color: #fff;
+  text-decoration: none;
+}
+
+form {
+  background-color: white;
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ccc;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #004080;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #003060;
+}
+
+/* Animación para el logo */
+.logo {
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: rotate(5deg) scale(1.05);
+}
+
+/* Estilos para controles de audio */
+.audio-controls {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: rgba(0, 75, 135, 0.8);
+  padding: 10px 15px;
+  border-radius: 30px;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  animation: fadeIn 1s ease-out;
+}
+
+.audio-controls button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+  transition: transform 0.3s;
+}
+
+.audio-controls button:hover {
+  transform: scale(1.2);
+}
+
+.audio-controls input[type="range"] {
+  width: 80px;
+  cursor: pointer;
+}
+
+/* Efecto para cuando el audio está muteado */
+.audio-muted .audio-controls {
+  opacity: 0.7;
+}

@@ -178,3 +178,28 @@ footer {
 .audio-muted .audio-controls {
   opacity: 0.7;
 }
+
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 480px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* FLEXBOX DE FILTROS */
+.filtros {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    flex-wrap: wrap;
+}
+
+.filtros select {
+    padding: 10px;
+    margin: 10px 0;
+}

@@ -83,31 +83,41 @@ header {
     margin: 0;
 }
 
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
 .producto {
-  border: 1px solid #ccc;
+  background-color: white;
+  border-radius: 10px;
   padding: 15px;
-  margin: 10px;
-  border-radius: 8px;
-  display: inline-block;
-  width: 200px;
-  vertical-align: top;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   text-align: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.producto:hover {
+  transform: scale(1.03);
 }
 
 .producto img {
-  width: 100%;
-  height: auto;
-  border-radius: 4px;
+  max-width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.producto p {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #333;
 }
 
 .producto h4 {
   margin: 10px 0 5px;
-}
-
-.producto p {
-  margin: 5px 0;
-  font-weight: bold;
+  font-size: 18px;
 }
 
 .producto button {
@@ -124,6 +134,10 @@ header {
   background-color: #218838;
 }
 
+.productos-fieldset {
+  overflow-x: hidden;
+  width: 1%;
+}
 /*CARRITO*/
 #carrito-count {
   font-weight: bold;
@@ -360,4 +374,29 @@ header {
 /* Efecto para cuando el audio está muteado */
 .audio-muted .audio-controls {
   opacity: 0.7;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 480px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* FLEXBOX DE FILTROS */
+.filtros {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    flex-wrap: wrap;
+}
+
+.filtros select {
+    padding: 10px;
+    margin: 10px 0;
 }

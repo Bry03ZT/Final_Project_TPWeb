@@ -368,26 +368,7 @@
             <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="0.3" aria-label="Control de volumen">
         </div>
         
-        <script>
-            let carrito = [];
-
-            function agregarAlCarrito(nombre, precio) {
-              carrito.push({ nombre, precio });
-              alert(`Producto agregado: ${nombre}\nPrecio: S/${precio}`);
-              document.getElementById('carrito-count').textContent = carrito.length;
-              localStorage.setItem('carritoSolfix', JSON.stringify(carrito));
-            }
-
-            // Restaurar productos del carrito si ya existen
-            document.addEventListener('DOMContentLoaded', function () {
-              const datosGuardados = localStorage.getItem('carritoSolfix');
-              if (datosGuardados) {
-                carrito = JSON.parse(datosGuardados);
-                document.getElementById('carrito-count').textContent = carrito.length;
-              }
-            });
-        </script>
-        
+        <script src="JS/agregacarrito.js"></script>
         <script src="JS/multimedia.js"></script>
     </body>
 </html>

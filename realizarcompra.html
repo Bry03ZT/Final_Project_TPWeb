@@ -8,8 +8,9 @@
         <link rel="icon" href="IMAGENES1/logo2.jpg" type="image/x-icon">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
         <link rel="icon" href="IMAGENES1/carrito.png" type="image/x-icon">
-            <link rel="stylesheet" href="ESTILO1/carrito.css">
-            <script src="JS/carrito.js"></script>
+        <link rel="stylesheet" href="ESTILO1/carrito.css">
+        <script src="JS/carrito.js"></script>
+        <script src="JS/realizacompra.js"></script>
     </head>
     <body>
         <header>
@@ -21,10 +22,10 @@
             </div>   
         </header>
         
-                        <!-- Ícono en la parte superior derecha -->
-                  <div class="icon-container">
-                      <img src="IMAGENES1/carrito.png" alt="Carrito de Compras" id="iconoCarrito">
-                  </div>
+        <!-- Ícono en la parte superior derecha -->
+        <div class="icon-container">
+            <img src="IMAGENES1/carrito.png" alt="Carrito de Compras" id="iconoCarrito">
+        </div>
                         
         <div style="margin-top: 20px;">
             <a href="carrito.html">
@@ -35,59 +36,260 @@
         
         <p>Productos seleccionados en el carrito: <span id="carrito-count">0</span></p>
         
+        <section class="filtros">
+            <label>
+                Ordenar por:
+                <select id="ordenar">
+                    <option value="default">-- Seleccionar --</option>
+                    <option value="nombre">Nombre</option>
+                    <option value="precio">Precio</option>
+                </select>
+            </label>
+            <label>
+                Categoría:
+                <select id="categoria">
+                    <option value="todos">Todos</option>
+                    <option value="pisos">Pisos</option>
+                    <option value="pared">Pared</option>
+                    <option value="cocina">Cocina</option>
+                    <option value="baños">Baños</option>
+                    <option value="pegamentos">Pegamentos y Accesorios</option>
+                </select>
+            </label>
+        </section>
+        
         <main>
-            <div class="producto">
-                <img src="IMAGENES1/Altamira.png" alt="Piso Altamira">
-                <h4>Piso Altamira Blanco 45x45 Caja: 2.23 m<sup>2</sup></h4>
-                <p>S/31.00 x m<sup>2</sup></p>
-                <p>Precio por caja: S/69.13</p>
-                <button onclick="agregarAlCarrito('Piso Altamira Blanco', 69.13)">Agregar al carrito</button>
-            </div>
-
-            <div class="producto">
-                <img src="IMAGENES1/ArceNat.png" alt="Piso Cerámico 2">
-                <h4>Piso Arce Natural Comercial 60x60 Caja: 1.80 m<sup>2</sup></h4>
-                <p>S/22.50 x m<sup>2</sup></p>
-                <p>Precio por caja: S/40.50</p>
-                <button onclick="agregarAlCarrito('Piso Arce Natural', 40.50)">Agregar al carrito</button>
-            </div>
-
-            <div class="producto">
-                <img src="IMAGENES1/AteGri.png" alt="Piso Cerámico 2">
-                <h4>Piso Atenas Gris 45x45 Caja: 2.23 m<sup>2</sup></h4>
-                <p>S/25.50 x m<sup>2</sup></p>
-                <p>Precio por caja: S/56.87</p>
-                <button onclick="agregarAlCarrito('Piso Atenas Gris', 56.87)">Agregar al carrito</button>
-            </div>
-            
-            <div class="producto">
-                <img src="IMAGENES1/AteMarfil.png" alt="Piso Cerámico 4">
-                <h4>Piso Atenas Marfil 45x45 Caja: 2.23 m<sup>2</sup></h4>
-                <p>S/25.50 x m<sup>2</sup></p>
-                <p>Precio por caja: S/56.87</p>
-                <button onclick="agregarAlCarrito('Piso Atenas Gris', 56.87)">Agregar al carrito</button>
-            </div>
-            <div class="producto">
-                <img src="IMAGENES1/Brasilia.png" alt="Piso Cerámico 5">
-                <h4>Piso Brasilia Natural Ext. 45x45 - Celima Caja: 2.23 m<sup>2</sup></h4>
-                <p>S/24.60 x m<sup>2</sup></p>
-                <p>Precio por caja: S/54.86</p>
-                <button onclick="agregarAlCarrito('Piso Atenas Gris', 56.87)">Agregar al carrito</button>
-            </div>
-            <div class="producto">
-                <img src="IMAGENES1/Bristol.png" alt="Piso Cerámico 6">
-                <h4>Piso Bristol Caramelo 60x60 Caja: 1.8 m<sup>2</sup></h4>
-                <p>S/32.50 x m<sup>2</sup></p>
-                <p>Precio por caja: S/58.50</p>
-                <button onclick="agregarAlCarrito('Piso Atenas Gris', 56.87)">Agregar al carrito</button>
-            </div>
-            <div class="producto">
-                <img src="IMAGENES1/CaobaBeige.png" alt="Piso Cerámico 7">
-                <h4>Piso Caoba Beige Com. 60x60 - Celima Caja: 1.8 m<sup>2</sup></h4>
-                <p>S/20.00 x m<sup>2</sup></p>
-                <p>Precio por caja: S/36.00</p>
-                <button onclick="agregarAlCarrito('Piso Atenas Gris', 56.87)">Agregar al carrito</button>
-            </div>
+            <section class="productos-grid">                
+                <div class="producto" data-categoria="pisos" data-nombre="Altamira Blanco" data-precio="69.13">
+                    <img src="IMAGENES1/Altamira.png" alt="Piso Altamira">
+                    <h4>Piso Altamira Blanco 45x45 Caja: 2.23 m<sup>2</sup></h4>
+                    <p>S/31.00 x m<sup>2</sup></p>
+                    <p>Precio por caja: S/69.13</p>
+                    <button onclick="agregarAlCarrito('Piso Altamira Blanco', 69.13)">Agregar al carrito</button>
+                </div>
+                <div class="producto" data-categoria="pisos" data-nombre="Arce Natural" data-precio="40.50">
+                    <img src="IMAGENES1/ArceNat.png" alt="Piso Cerámico 2">
+                    <h4>Piso Arce Natural Comercial 60x60 Caja: 1.80 m<sup>2</sup></h4>
+                    <p>S/22.50 x m<sup>2</sup></p>
+                    <p>Precio por caja: S/40.50</p>
+                    <button onclick="agregarAlCarrito('Piso Arce Natural', 40.50)">Agregar al carrito</button>
+                </div>
+                <div class="producto" data-categoria="pisos" data-nombre="Atenas Gris" data-precio="56.87">
+                    <img src="IMAGENES1/AteGri.png" alt="Piso Cerámico 2">
+                    <h4>Piso Atenas Gris 45x45 Caja: 2.23 m<sup>2</sup></h4>
+                    <p>S/25.50 x m<sup>2</sup></p>
+                    <p>Precio por caja: S/56.87</p>
+                    <button onclick="agregarAlCarrito('Piso Atenas Gris', 56.87)">Agregar al carrito</button>
+                </div>
+                <div class="producto" data-categoria="pisos" data-nombre="Atenas Marfil" data-precio="56.87">
+                    <img src="IMAGENES1/AteMarfil.png" alt="Piso Cerámico 4">
+                    <h4>Piso Atenas Marfil 45x45 Caja: 2.23 m<sup>2</sup></h4>
+                    <p>S/25.50 x m<sup>2</sup></p>
+                    <p>Precio por caja: S/56.87</p>
+                    <button onclick="agregarAlCarrito('Piso Atenas Marfil', 56.87)">Agregar al carrito</button>
+                </div>
+                <div class="producto" data-categoria="pisos" data-nombre="Brasilia Natural" data-precio="54.86">
+                    <img src="IMAGENES1/Brasilia.png" alt="Piso Cerámico 5">
+                    <h4>Piso Brasilia Natural Ext. 45x45 - Celima Caja: 2.23 m<sup>2</sup></h4>
+                    <p>S/24.60 x m<sup>2</sup></p>
+                    <p>Precio por caja: S/54.86</p>
+                    <button onclick="agregarAlCarrito('Piso Brasilia Natural', 54.86)">Agregar al carrito</button>
+                </div>
+                <div class="producto" data-categoria="pisos" data-nombre="Bristol Caramelo" data-precio="58.50">
+                    <img src="IMAGENES1/Bristol.png" alt="Piso Cerámico 6">
+                    <h4>Piso Bristol Caramelo 60x60 Caja: 1.8 m<sup>2</sup></h4>
+                    <p>S/32.50 x m<sup>2</sup></p>
+                    <p>Precio por caja: S/58.50</p>
+                    <button onclick="agregarAlCarrito('Piso Bristol Caramelo', 58.50)">Agregar al carrito</button>
+                </div>
+                <div class="producto" data-categoria="pisos" data-nombre="Caoba Beige" data-precio="36.00">
+                    <img src="IMAGENES1/CaobaBeige.png" alt="Piso Cerámico 7">
+                    <h4>Piso Caoba Beige Com. 60x60 - Celima Caja: 1.8 m<sup>2</sup></h4>
+                    <p>S/20.00 x m<sup>2</sup></p>
+                    <p>Precio por caja: S/36.00</p>
+                    <button onclick="agregarAlCarrito('Piso Caoba Beige', 36.00)">Agregar al carrito</button>
+                </div>
+                <!-- PRODUCTOS DE PARED -->
+                <div class="producto" data-categoria="pared" data-nombre="Amapola Hueso" data-precio="75.21">
+                    <img src="IMAGENES1/AmapolaHueso.png" alt="Cerámica de Pared 1">
+                    <h4>Pared Amapola Hueso 30x60 Caja: 2.18 m<sup>2</sup></h4>
+                    <p>S/34.50 x m<sup>2</sup></p>
+                    <p>Precio por Caja: S/75.21</p>
+                    <button onclick="agregarAlCarrito('Pared Amapola Hueso', 75.21)">Agregar al carrito</button>
+                </div>
+                <div class="producto" data-categoria="pared" data-nombre="Chocolate Azul" data-precio="51.34">
+                    <img src="IMAGENES1/ChocolateAzul.png" alt="Cerámica de Pared 2">
+                    <h4>Pared Chocolate Azul 27x45 Caja: 2.07 m<sup>2</sup></h4>
+                    <p>S/24.80 x m<sup>2</sup></p>
+                    <p>Precio por Caja: S/51.34</p>
+                    <button onclick="agregarAlCarrito('Pared Chocolate Azul', 51.34)">Agregar al carrito</button>
+                </div>
+                <div class="producto" data-categoria="pared" data-nombre="fresia Hueso" data-precio="59.55">
+                    <img src="IMAGENES1/FresiaHueso.png" alt="Cerámica de Pared 3">
+                    <h4>Pared Fresia Hueso 30x60 Caja: 1.81 m<sup>2</sup></h4>
+                    <p>S/32.90 x m<sup>2</sup></p>
+                    <p>Precio por Caja: S/59.55</p>
+                    <button onclick="agregarAlCarrito('Pared Fresia Hueso', 59.55)">Agregar al carrito</button>
+                </div>
+                <div class="producto" data-categoria="pared" data-nombre="Filetti Granito Beige" data-precio="45.36">
+                    <img src="IMAGENES1/FileBeige.png" alt="Cerámica de Pared 4">
+                    <h4>Pared Filetti Granito Beige Extra 30x60 - Celima Caja: 1.62 m<sup>2</sup></h4>
+                    <p>S/28.00 x m<sup>2</sup></p>
+                    <p>Precio por Caja: S/45.36</p>
+                    <button onclick="agregarAlCarrito('Pared Filetti Granito Beige', 45.36)">Agregar al carrito</button>
+                </div>
+                <div class="producto" data-categoria="pared" data-nombre="Filetti Granito Gris" data-precio="60.91">
+                    <img src="IMAGENES1/Filetti.png" alt="Cerámica de Pared 5">
+                    <h4>Pared Filetti Granito Gris 30x60 - Caja: 1.62 m<sup>2</sup></h4>
+                    <p>S/37.60 x m<sup>2</sup></p>
+                    <p>Precio por Caja: S/60.91</p>
+                    <button onclick="agregarAlCarrito('Pared Filetti Granito Gris', 60.91)">Agregar al carrito</button>
+                </div>
+                <div class="producto" data-categoria="pared" data-nombre="Lineari Gris Brillante" data-precio="64.26">
+                    <img src="IMAGENES1/LinGr.png" alt="Cerámica de Pared 6">
+                    <h4>Pared Lineare Gris Brillante 30x60 Caja: 1.81 m<sup>2</sup></h4>
+                    <p>S/35.50 x m<sup>2</sup></p>
+                    <p>Precio por Caja: S/64.26</p>
+                    <button onclick="agregarAlCarrito('Pared Lineare Gris Brillante', 64.26)">Agregar al carrito</button>
+                </div>
+                <!-- PRODUCTOS DE COCINA -->
+                <div class="producto" data-categoria="cocina" data-nombre="Lavaplatos Durainox" data-precio="349.90">
+                    <img src="IMAGENES1/Durainox.png" alt="Lavadero Cocina 1">
+                    <h4>Lavaplatos Durainox 1 Poza con Escurridor 89 cm x 46 cm - Record Caja: 1 unidad</h4>
+                    <p>S/349.90 x unidad</p>
+                    <p>Precio por Caja: S/349.90</p>
+                    <button onclick="agregarAlCarrito('Lavaplatos Durainox 1 Poza con Escurridor', 349.90)">Agregar al carrito</button>
+                </div>
+                <div class="producto" data-categoria="cocina" data-nombre="Lavaplatos Berlín" data-precio="295.00">
+                    <img src="IMAGENES1/BerlinPoza.png" alt="Lavadero Cocina 2">
+                    <h4>Lavaplatos Berlín 1 Poza 50 cm x 36 cm - Record Caja: 1 unidad</h4>
+                    <p>S/295.00 x unidad</p>
+                    <p>Precio por Caja: S/295.00</p>
+                    <button onclick="agregarAlCarrito('Lavaplatos Berlín 1 Poza', 295.90)">Agregar al carrito</button>
+                </div>
+                <div class="producto" data-categoria="cocina" data-nombre="Llave Eco Cocina al mueble Trebol" data-precio="131.50">
+                    <img src="IMAGENES1/EcoCocina.png" alt="Llave lavadero 1">
+                    <h4>Llave Eco Cocina al mueble 1/2" Trebol</h4>
+                    <p>S/ 131.50</p>
+                    <button onclick="agregarAlCarrito('Llave Eco Cocina al mueble', 131.50)">Agregar al carrito</button>
+                </div>
+                <div class="producto" data-categoria="cocina" data-nombre="Llave Mares Aquarius" data-precio="150.60">
+                    <img src="IMAGENES1/MaresAquarius.png" alt="Llave lavadero 2">
+                    <h4>Llave Mares Aquarius P/Lavaplatos pared "L" Vainsa</h4>
+                    <p>S/ 150.60</p>
+                    <button onclick="agregarAlCarrito('Llave Mares Aquarius P/Lavaplatos pared L Vainsa', 150.60)">Agregar al carrito</button>
+                </div>
+                <!-- PRODUCTOS DE BAÑO -->
+                <div class="producto" data-categoria="baños" data-nombre="Combo Inodoro" data-precio="211.00">
+                    <img src="IMAGENES1/CombInodoro.png" alt="ComboInoLav">
+                    <h4>Combo Inodoro Rapid Jet + Lavatorio Eco Blanco Trébol</h4>
+                    <p>S/ 211.00</p>
+                    <button onclick="agregarAlCarrito('Combo Inodoro Rapid Jet + Lavatorio Eco Blanco Trébol', 211.00)">Agregar al carrito</button>
+                </div>
+                <div class="producto" data-categoria="baños" data-nombre="Ducha Teléfono" data-precio="207.92">
+                    <img src="IMAGENES1/DuchTef.png" alt="Ducha">
+                    <h4>Ducha Teléfono GAP12 C/Soporte Vainsa</h4>
+                    <p>S/ 207.92</p>
+                    <button onclick="agregarAlCarrito('Ducha Teléfono GAP12 C/Soporte Vainsa', 207.92)">Agregar al carrito</button>
+                </div>
+                <div class="producto" data-categoria="baños" data-nombre="Lavatorio Luna" data-precio="179.90">
+                    <img src="IMAGENES1/LavLuna.png" alt="Lavamanos">
+                    <h4>Lavatorio Luna Blanco Trebol</h4>
+                    <p>S/ 179.90</p>
+                    <button onclick="agregarAlCarrito('Lavatorio Luna Blanco Trebol', 179.90)">Agregar al carrito</button>
+                </div>
+                <div class="producto" data-categoria="baños" data-nombre="Llave Brenta" data-precio="219.90">
+                    <img src="IMAGENES1/LlaveBrenta.png" alt="Llave">
+                    <h4>Llave Brenta de 1/2" Lavatorio Pico Alto - Trebol</h4>
+                    <p>S/ 219.90</p>
+                    <button onclick="agregarAlCarrito('Llave Brenta de 1/2 Lavatorio Pico Alto', 219.90)">Agregar al carrito</button>
+                </div>
+                <!-- PRODUCTOS DE PEGAMENTOS Y ACCESORIOS -->
+                <div class="producto" data-categoria="pegamentos" data-nombre="Cruceta de 1 mm." data-precio="9.50">
+                    <img src="IMAGENES1/Cruceta1.png" alt="Crucetas">
+                    <h4>Cruceta de 1 mm. Rodotop Bolsa x 300 pz. - Nefusac</h4>
+                    <p>S/9.50</p>
+                    <button onclick="agregarAlCarrito('Cruceta de 1 mm. Rodotop Bolsa x 300 pz. - Nefusac', 9.50)">Agregar al carrito</button>
+                </div>
+                <div class="producto" data-categoria="pegamentos" data-nombre="Cruceta de 2 mm." data-precio="10.00">
+                    <img src="IMAGENES1/Cruceta2.png" alt="Crucetas">
+                    <h4>Cruceta de 2 mm. Rodotop Bolsa x 250 pz. - Nefusac</h4>
+                    <p>S/10.00</p>
+                    <button onclick="agregarAlCarrito('Cruceta de 2 mm. Rodotop Bolsa x 250 pz. - Nefusac', 10.00)">Agregar al carrito</button>
+                </div>
+                <div class="producto" data-categoria="pegamentos" data-nombre="Cruceta de 3 mm." data-precio="9.00">
+                    <img src="IMAGENES1/Cruceta3.png" alt="Crucetas">
+                    <h4>Cruceta de 3 mm. Rodotop Bolsa x 200 pz. - Nefusac</h4>
+                    <p>S/9.00</p>
+                    <button onclick="agregarAlCarrito('Cruceta de 3 mm. Rodotop Bolsa x 200 pz. - Nefusac', 9.00)">Agregar al carrito</button>
+                </div>
+                <div class="producto" data-categoria="pegamentos" data-nombre="Fragua Interior 1 Kg Beige Celima" data-precio="4.40">
+                    <img src="IMAGENES1/FraBeige.png" alt="Fraguas">
+                    <h4>Fragua Interior 1 Kg Beige Celima</h4>
+                    <p>S/4.40</p>
+                    <button onclick="agregarAlCarrito('Fragua Interior 1 Kg Beige Celima', 4.40)">Agregar al carrito</button>
+                </div>
+                <div class="producto" data-categoria="pegamentos" data-nombre="Fragua Interior 1 Kg Granizo Celima" data-precio="6.50">
+                    <img src="IMAGENES1/FraGranizo.png" alt="Fraguas">
+                    <h4>Fragua Interior 1 Kg Granizo Celima</h4>
+                    <p>S/6.50</p>
+                    <button onclick="agregarAlCarrito('Fragua Interior 1 Kg Granizo Celima', 6.50)">Agregar al carrito</button>
+                </div>
+                <div class="producto" data-categoria="pegamentos" data-nombre="Fragua Interior 1 Kg Hueso Celima" data-precio="4.40">
+                    <img src="IMAGENES1/FraHueso.png" alt="Fraguas">
+                    <h4>Fragua Interior 1 Kg Hueso Celima</h4>
+                    <p>S/4.40</p>
+                    <button onclick="agregarAlCarrito('Fragua Interior 1 Kg Hueso Celima', 4.40)">Agregar al carrito</button>
+                </div> 
+                <div class="producto" data-categoria="pegamentos" data-nombre="Fragua Porcelanato 1 Kg Blanco Celima" data-precio="10.50">
+                    <img src="IMAGENES1/FraPorBla.png" alt="Fraguas">
+                    <h4>Fragua Porcelanato 1 Kg Blanco Celima</h4>
+                    <p>S/10.50</p>
+                    <button onclick="agregarAlCarrito('Fragua Porcelanato 1 Kg Blanco Celima', 10.50)">Agregar al carrito</button>
+                </div>
+                <div class="producto" data-categoria="pegamentos" data-nombre="Fragua Porcelanato 1 Kg Blanco Humo Celima" data-precio="9.00">
+                    <img src="IMAGENES1/FraPorBH.png" alt="Fraguas">
+                    <h4>Fragua Porcelanato 1 Kg Blanco Humo Celima</h4>
+                    <p>S/9.00</p>
+                    <button onclick="agregarAlCarrito('Fragua Porcelanato 1 Kg Blanco Humo Celima', 9.00)">Agregar al carrito</button>
+                </div>
+                <div class="producto" data-categoria="pegamentos" data-nombre="Fragua Porcelanato 1 Kg Gris Celima" data-precio="9.00">
+                    <img src="IMAGENES1/FraPorGr.png" alt="Fraguas">
+                    <h4>Fragua Porcelanato 1 Kg Gris Celima</h4>
+                    <p>S/9.00</p>
+                    <button onclick="agregarAlCarrito('Fragua Porcelanato 1 Kg Gris Celima', 9.00)">Agregar al carrito</button>
+                </div>
+                <div class="producto" data-categoria="pegamentos" data-nombre="Fragua Porcelanato 1 Kg Negro Celima" data-precio="9.00">
+                    <img src="IMAGENES1/FraPorNe.png" alt="Fraguas">
+                    <h4>Fragua Porcelanato 1 Kg Negro Celima</h4>
+                    <p>S/9.00</p>
+                    <button onclick="agregarAlCarrito('Fragua Porcelanato 1 Kg Negro Celima', 9.00)">Agregar al carrito</button>
+                </div>
+                <div class="producto" data-categoria="pegamentos" data-nombre="Fragua Premium 1 Kg Aluminio Celima" data-precio="8.00">
+                    <img src="IMAGENES1/FraPreAl.png" alt="Fraguas">
+                    <h4>Fragua Premium 1 Kg Aluminio Celima</h4>
+                    <p>S/8.00</p>
+                    <button onclick="agregarAlCarrito('Fragua Premium 1 Kg Aluminio Celima', 8.00)">Agregar al carrito</button>
+                </div>
+                <div class="producto" data-categoria="pegamentos" data-nombre="Fragua Premium 1 Kg Arena Celima" data-precio="8.00">
+                    <img src="IMAGENES1/FraPreArena.png" alt="Fraguas">
+                    <h4>Fragua Premium 1 Kg Arena Celima</h4>
+                    <p>S/8.00</p>
+                    <button onclick="agregarAlCarrito('Fragua Premium 1 Kg Arena Celima', 8.00)">Agregar al carrito</button>
+                </div>  
+                <div class="producto" data-categoria="pegamentos" data-nombre="Fragua Premium 1 Kg Avellana Celima" data-precio="8.00">
+                    <img src="IMAGENES1/FraPreAv.png" alt="Fraguas">
+                    <h4>Fragua Premium 1 Kg Avellana Celima</h4>
+                    <p>S/8.00</p>
+                    <button onclick="agregarAlCarrito('Fragua Premium 1 Kg Avellana Celima', 8.00)">Agregar al carrito</button>
+                </div> 
+                <div class="producto" data-categoria="pegamentos" data-nombre="Cortadora Manual Star 63 Platinum" data-precio="632.90">
+                    <img src="IMAGENES1/Cortadora63.png" alt="Cortadora63">
+                    <h4>Cortadora Manual Star 63 Platinum</h4>
+                    <p>S/632.90</p>
+                    <button onclick="agregarAlCarrito('Cortadora Manual Star 63 Platinum', 632.90)">Agregar al carrito</button>
+                </div>
+            </section>
         </main>
         
         <footer class="footer">
@@ -189,4 +391,3 @@
         <script src="JS/multimedia.js"></script>
     </body>
 </html>
-

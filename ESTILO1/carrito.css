@@ -1,4 +1,4 @@
-body {
+ody {
     font-family: 'Rubik', sans-serif;
     text-align: center;
     margin: 0;
@@ -325,4 +325,71 @@ h1 {
 
 .boton-volver:hover {
     background-color: #0056b3;
+}
+
+/* Modal emergente */
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 99999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
+  animation: fadeIn 0.5s ease;
+}
+
+.modal-contenido {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  animation: slideDown 0.5s ease;
+}
+
+.modal-contenido h2 {
+  color: #004b87;
+}
+
+.modal-contenido button {
+  background-color: #ff8000;
+  color: white;
+  padding: 10px 20px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.modal-contenido button:hover {
+  background-color: #e67300;
+}
+
+.cerrar {
+  color: #888;
+  font-size: 28px;
+  float: right;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.cerrar:hover {
+  color: red;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes slideDown {
+  from {transform: translateY(-50px); opacity: 0;}
+  to {transform: translateY(0); opacity: 1;}
 }

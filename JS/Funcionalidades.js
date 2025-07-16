@@ -1,21 +1,8 @@
 // Variables globales
 const empresa = "SOLFIX PERÚ S.A.C.";
-const servicios = ["Elevadores", "Adhesivos", "Acabados", "Paneles Solares"];
 const contactos = { telefono: "01-123-4567", correo: "info@solfix.com" };
 
 // Función para mostrar servicios (usada en servicios.html)
-function mostrarServiciosEnPagina() {
-  const contenedor = document.getElementById("lista-servicios-js");
-  if (contenedor) {
-    contenedor.innerHTML = "<h3>Servicios Disponibles:</h3><ul></ul>";
-    const lista = contenedor.querySelector("ul");
-    servicios.forEach((servicio) => {
-      const item = document.createElement("li");
-      item.textContent = servicio;
-      lista.appendChild(item);
-    });
-  }
-}
 
 // Consulta de horarios
 function verificarAtencion(dia) {
@@ -106,3 +93,54 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+/*Avance 4*/
+let servicios = [];
+
+function mostrarServicios(lista = servicios) {
+  const tbody = document.querySelector("#tabla-servicios tbody");
+  tbody.innerHTML = "";
+  lista.forEach((servicio, index) => {
+    tbody.innerHTML += `
+      <tr>
+        <td>${servicio.nombre}</td>
+        <td>${servicio.descripcion}</td>
+        <td>
+          <button onclick="editarServicio(${index})">Editar</button>
+          <button onclick="eliminarServicio(${index})">Eliminar</button>
+        </td>
+      </tr>
+    `;
+  });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("form-servicio").addEventListener("submit", function (e) {
+    e.preventDefault();
+    const nombre = document.getElementById("nombre").value;
+    const descripcion = document.getElementById("descripcion").value;
+
+    servicios.push({ nombre, descripcion });
+    mostrarServicios();
+    this.reset();
+  });
+
+  document.getElementById("busqueda").addEventListener("input", function () {
+    const termino = this.value.toLowerCase();
+    const filtrados = servicios.filter(s =>
+      s.nombre.toLowerCase().includes(termino) || s.descripcion.toLowerCase().includes(termino)
+    );
+    mostrarServicios(filtrados);
+  });
+});
+
+function eliminarServicio(index) {
+  servicios.splice(index, 1);
+  mostrarServicios();
+}
+
+function editarServicio(index) {
+  const servicio = servicios[index];
+  document.getElementById("nombre").value = servicio.nombre;
+  document.getElementById("descripcion").value = servicio.descripcion;
+  servicios.splice(index, 1);
+}

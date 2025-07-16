@@ -13,7 +13,6 @@
       <script src="JS/carrito.js"></script>
       <script src="JS/Menu.js"></script>
        <script src="JS/multimedia.js"></script>
-      
 
     </head>
     <body>
@@ -120,7 +119,30 @@ Acompañamos a nuestros clientes en cada etapa, desde la especificación técnic
               <p>Asesoramiento y capacitación en protocolos de seguridad y prevención.</p>
             </div>
       </section>
-         
+        
+         <!-- avance 4 CRUD-->
+             <section id="gestor-servicios">
+                <h2>Gestión de Servicios</h2>
+                <form id="form-servicio">
+                  <input type="text" id="nombre" placeholder="Nombre del servicio" required />
+                  <input type="text" id="descripcion" placeholder="Descripción" required />
+                  <button type="submit">Agregar Servicio</button>
+                </form>
+
+             <input type="text" id="busqueda" placeholder="Buscar servicio..." />
+
+             <table id="tabla-servicios">
+                    <thead>
+                      <tr>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Acciones</th>
+                      </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+              </section>
+        
          <!<!-- aca se puede implementar -->
         <button onclick="mostrarVentana()">Consultar Horario</button>
 

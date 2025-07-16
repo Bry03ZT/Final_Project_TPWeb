@@ -1,76 +1,89 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CARRITO DE COMPRAS | SOLFIX PERÚ S.A.C.</title>
-    <link rel="icon" href="IMAGENES1/carrito.png" type="image/x-icon">
-    <link rel="stylesheet" href="ESTILO1/carrito.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <script src="JS/Menu.js"></script>
-</head>
-<body>
-    <header>
-        <div class="header-container">
-            <div class="logo-container">
-                    <a href="index.html">
-                        <img src="IMAGENES1/logo2.jpg" alt="Logo Solfix Perú" class="logo">
-                    </a>
-            </div>
-            <div class="logo-container">
-                <h1 class="titulo-principal">🛒 Carrito de Compras</h1>                    
-            </div>
-        </div>
-    </header>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CARRITO DE COMPRAS | SOLFIX PERÚ S.A.C.</title>
+        <link rel="icon" href="IMAGENES1/carrito.png" type="image/x-icon">
+        <link rel="stylesheet" href="ESTILO1/carrito.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <script src="JS/Menu.js"></script>
+    </head>
     
-    <!-- Ícono en la parte superior derecha -->
-    <div class="icon-container">
-        <img src="IMAGENES1/carrito.png" alt="Carrito de Compras" id="iconoCarrito">
-    </div>
-    <button onclick="volverPagina()" class="boton-volver">Volver</button>
-
-    <main>
-        <!-- El contenido de la página va aquí -->
-        <div style="margin-top: 40px;" id="carrito-container"></div>
-        <div style="margin-top: 40px;" id="total"></div>
-        <div style="margin-top: 40px;">
-            <button onclick="vaciarCarrito()" class="boton-vaciar">Vaciar Carrito</button>
-            <button onclick="volverComprar()" class="boton-volver">Seguir Comprando</button>
-        </div>
-    </main>
-    
-    <footer>
-        <div class="footer-container">
-            <p>© 2025 SOLFIX PERU S.A.C. - Todos los derechos reservados.</p>
-            <p><i class="fas fa-phone"></i> (01) 123-4567 | <i class="fas fa-envelope"></i> info@solfix.com</p>
-        </div>
-        <div style="text-align: center; padding: 15px;">
-            <a href="libroreclamos.html" title="Libro de Reclamaciones">
-                <img src="IMAGENES1/Librorecla.png" alt="Libro de Reclamaciones" style="width: 120px;">
-            </a>
-            <p style="font-size: 14px;">Libro de Reclamaciones</p>
-        </div>
-        
-        <div class="fullscreen-buttons">
-                <button onclick="openFullscreen()"><i class="fas fa-expand"></i> Pantalla Completa</button>
-                <button onclick="closeFullscreen()"><i class="fas fa-compress"></i> Salir</button>
-        </div>
-    </footer>
-
-    <!-- Audio de fondo con controles -->
-    <audio id="backgroundAudio" loop>
-        <source src="AUDIO/music-background-peaceful.mp3" type="audio/mp3">
-    </audio>
-
-    <!-- Controles de audio flotantes -->
-    <div class="audio-controls">
-        <button id="toggleAudio" aria-label="Reproducir/Pausar sonido de fondo">
-            <i class="fas fa-volume-up"></i>
-        </button>
-        <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="0.3" aria-label="Control de volumen">
+    <!-- Modal Emergente de Oferta -->
+    <div id="modalOferta" class="modal">
+      <div class="modal-contenido">
+        <span class="cerrar" id="cerrarModal">&times;</span>
+        <h2>🎉 ¡Oferta Especial!</h2>
+        <p>Agrega un producto más y obtén <strong>10% de descuento</strong> en tu compra.</p>
+        <button onclick="window.location.href='realizarcompra.html'">Ver productos</button>
+      </div>
     </div>
     
-    <script src="JS/carrito.js"></script>
-    <script src="JS/multimedia.js"></script>
-</body>
+    <body>
+        <header>
+            <div class="header-container">
+                <div class="logo-container">
+                        <a href="index.html">
+                            <img src="IMAGENES1/logo2.jpg" alt="Logo Solfix Perú" class="logo">
+                        </a>
+                </div>
+                <div class="logo-container">
+                    <h1 class="titulo-principal">🛒 Carrito de Compras</h1>                    
+                </div>
+            </div>
+        </header>
+
+        <!-- Ícono en la parte superior derecha -->
+        <div class="icon-container">
+            <img src="IMAGENES1/carrito.png" alt="Carrito de Compras" id="iconoCarrito">
+        </div>
+
+        <main>
+            <!-- El contenido de la página va aquí -->
+            <div style="margin-top: 40px;" id="carrito-container"></div>
+            <div style="margin-top: 40px;" id="total"></div>
+            <div style="margin-top: 40px;">
+                <button onclick="vaciarCarrito()" class="boton-vaciar">Vaciar Carrito</button>
+                <button onclick="volverComprar()" class="boton-volver">Seguir Comprando</button>
+            </div>
+        </main>
+
+        <button onclick="volverPagina()" class="boton-volver">Volver</button>
+
+        <footer>
+            <div class="footer-container">
+                <p>© 2025 SOLFIX PERU S.A.C. - Todos los derechos reservados.</p>
+                <p><i class="fas fa-phone"></i> (01) 123-4567 | <i class="fas fa-envelope"></i> info@solfix.com</p>
+            </div>
+            <div style="text-align: center; padding: 15px;">
+                <a href="libroreclamos.html" title="Libro de Reclamaciones">
+                    <img src="IMAGENES1/Librorecla.png" alt="Libro de Reclamaciones" style="width: 120px;">
+                </a>
+                <p style="font-size: 14px;">Libro de Reclamaciones</p>
+            </div>
+
+            <div class="fullscreen-buttons">
+                    <button onclick="openFullscreen()"><i class="fas fa-expand"></i> Pantalla Completa</button>
+                    <button onclick="closeFullscreen()"><i class="fas fa-compress"></i> Salir</button>
+            </div>
+        </footer>
+
+        <!-- Audio de fondo con controles -->
+        <audio id="backgroundAudio" loop>
+            <source src="AUDIO/music-background-peaceful.mp3" type="audio/mp3">
+        </audio>
+
+        <!-- Controles de audio flotantes -->
+        <div class="audio-controls">
+            <button id="toggleAudio" aria-label="Reproducir/Pausar sonido de fondo">
+                <i class="fas fa-volume-up"></i>
+            </button>
+            <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="0.3" aria-label="Control de volumen">
+        </div>
+
+        <script src="JS/carrito.js"></script>
+        <script src="JS/multimedia.js"></script>
+    </body>
+    <script src="JS/oferta.js"></script>
 </html>

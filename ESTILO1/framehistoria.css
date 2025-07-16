@@ -1,0 +1,24 @@
+/* ESTILO1/carrito.css y ESTILO1/index.css */
+.logo-container {
+  text-align: center;
+  padding: 10px;
+}
+
+.logo {
+  max-width: 55%; /* La imagen ocupa el 80% del ancho del contenedor */
+  height: auto;   /* Mantiene la proporción */
+}
+
+.titulo-principal {
+  font-size: 7vw; /* Tamaño de fuente proporcional al ancho del viewport */
+  margin-top: 30px;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  img.section-image {
+    width: 90%;
+  }
+}
+
+

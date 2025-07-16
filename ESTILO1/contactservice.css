@@ -495,3 +495,43 @@ p{
   list-style-type: square;
   padding-left: 20px;
 }
+
+/*Nuevo*/
+#gestor-servicios {
+  margin: 30px auto;
+  max-width: 700px;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+#form-servicio input {
+  margin: 5px;
+  padding: 8px;
+}
+
+#form-servicio button {
+  padding: 8px 16px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 6px;
+}
+
+#tabla-servicios {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+#tabla-servicios th, #tabla-servicios td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+#tabla-servicios button {
+  margin: 0 5px;
+  padding: 4px 10px;
+}
